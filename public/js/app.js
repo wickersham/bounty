@@ -14,7 +14,7 @@ $( document ).ready(function(){
                top: 0,
                left: fixedTable.offset().left,
                width: fixedTable.width(),
-               'z-index':'1000'
+              //  'z-index':'1000'
            });
            isFixed = true;
        }
