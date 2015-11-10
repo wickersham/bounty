@@ -11,6 +11,13 @@ server.get("/", function(req, res) {
     res.sendFile("public/index.html");
 });
 
+server.get("", function(req, res){
+    User.find({}, function(err, response){
+        if(err)console.log(err);
+        res.json();
+    });
+});
+
 server.listen(port, function() {
     console.log("now listening on port " + port)
 })
