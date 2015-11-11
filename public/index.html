@@ -1,206 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <title>what the hell</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Custom CSS -->
+  <link href="css/landing-page.css" rel="stylesheet">
 
-    <title>Landing Page - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-
-<body>
-
-    <!-- Navigation -->
-    <!-- <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 
 
-    <!-- Header -->
-    <a name="banner"></a>
-    <div class="intro-header">
-      <a href='#banner'>
-      <img src="http://s4.evcdn.com/images/edpborder500/I0-001/023/447/563-7.png_/careersource-ncfl-presents-startup-showcase-featur-63.png" width="600px" height="600px" style="background-color: #fff;" alt="">
-      </a>
-    </div>
-    <!-- Divider for second header -->
-    <a  name="contact"></a>
-      <div class="banner" id="fixed-table">
 
-          <div class="container">
-
-              <div class="row">
-                  <div class="col-lg-6">
-                      <h2>Click here if you are:</h2>
-                  </div>
-                  <div class="col-lg-6">
-                      <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-success btn-lg"><i class="fa fa-search fa-fw"></i> <span class="network-name">Job Seekers!</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-success btn-lg"><i class="fa fa-building-o fa-fw"></i> <span class="network-name">Organizations!</span></a>
-                        </li>
-                      </ul>
-                  </div>
-              </div>
-
+</head>
+<body ng-app = "ngPrograms">
+  <div class="container">
+      <form class="col-md-8">
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Program Name " ng-model="programData.programName ">
           </div>
-          <!-- /.container -->
+          <!-- <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Minimum Cost " ng-model="programData.minCost ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Maximum Cost " ng-model="programData.maxCost ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Certification Granted " ng-model="programData.certificate ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" timeline " ng-model="programData.timeline ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" meals provided " ng-model="programData.meals ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" University Affiliation " ng-model="programData.affiliation ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Other program benefits " ng-model="programData.otherBenefits ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Minimum Age " ng-model="programData.minAge ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Maximum Age " ng-model="programData.maxAge ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Past Successes " ng-model="programData.pastSuccess ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" Past participants " ng-model="programData.pastParticipants ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" How get word out " ng-model="programData.wordOut ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" How funded " ng-model="programData.funded ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" impediments " ng-model="programData.impediments ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" number of participants " ng-model="programData.numParticipants ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" description " ng-model="programData.description ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" program url " ng-model="programData.programUrl ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" location " ng-model="programData.location ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" other comments " ng-model="programData.otherComments ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" partners " ng-model="programData.partners ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" scolarships " ng-model="programData.scholarships ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" parents involved " ng-model="programData.parentsInvolved ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" how to measure success " ng-model="programData.measureSuccess ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" NCFL funded? " ng-model="programData.NCFLFunded ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" bring day one " ng-model="programData.bringDayOne ">
+          </div>
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder=" in person " ng-model="programData.inPerson ">
+          </div> -->
 
-      </div>
-    <!--  -->
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-	<a  name="services"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Lorem ipsum dolor sit amet:<br>consectetur adipiscing elit</h2>
-                    <p class="lead">Donec posuere lectus vitae felis viverra iaculis. Nulla quis urna in metus imperdiet pellentesque quis in lorem. Proin sit amet odio euismod, pharetra velit vitae, gravida nunc. Fusce ut facilisis magna. Pellentesque pulvinar nisl augue, in dapibus orci cursus non. Morbi a enim leo. Mauris cursus lobortis lacus, sit amet efficitur felis lobortis in. Donec consequat massa et nibh condimentum placerat. Fusce euismod libero a velit luctus, a vulputate augue auctor.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b" id="about">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Donec sit amet ultrices sem<br>hodor</h2>
-                    <p class="lead">Sed libero mi, suscipit sit amet dui eu, consectetur blandit tortor. Duis gravida vel lacus dictum rutrum. Sed efficitur at diam nec sodales. Mauris sit amet faucibus ligula. Integer vulputate orci quis finibus dictum. Duis accumsan quis nulla vitae ullamcorper. Aliquam dapibus ante magna, a pharetra augue posuere laoreet. Praesent eu velit egestas, semper est eu, porta nisl. Cras feugiat, elit ut tristique facilisis, est nunc pretium tellus, vel mollis sapien eros eget elit. Cras dictum erat at bibendum lacinia. Nulla facilisi. Integer pretium rutrum consequat.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-</div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
+          <button class="btn btn-primary" type="submit" ng-click="createProgram()">Submit Program</button>
+      </form>
+  </div>
 
 
-    <!-- /.banner -->
 
-    <!-- Footer -->
-    <footer>
-      <div class="wrapper grid-block">
-<footer id="footer" class="grid-block uk-float-left">
-          </footer>
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- AppJS -->
+  <script src="js/app.js"></script>
 
-          <section id="copyright" class="grid-block uk-float-right">
-  <div class="module   deepest">
-
-
-<div>
-<p align="center">
-<a href="http://careersourceflorida.com"><img src="https://careersourcencfl.com/images/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<a href="http://jobcenter.usa.gov"><img src="https://careersourcencfl.com/images/logos/ajc_banner.png" style="vertical-align:middle" alt="American Job Center"></a>
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<a href="http://employflorida.com"><img src="https://careersourcencfl.com/images/logos/EF_WFP_LogoBrand_Blank_PMS.png" style="vertical-align:middle" alt="Employ Florida"></a>
-</p>
-<p align="center">
-<small>© 2015 CareerSource North Central Florida / Funded by CareerSource North Central Florida as a grantee of funds from the United States Department of Labor. CareerSource North Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this website may be reached by persons using TTY/TDD equipment via the Florida Relay Service at 711. </small>
-</p><p align="center">
-<small> CareerSource North Central Florida takes reports of alleged fraud, waste, and abuse seriously.  To submit a report of fraud, waste, or abuse, <a href="/report-fraud-waste-or-abuse">click here</a>.</small><br>
-<!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
-<br />--><small>To report an issue with the website or make a suggestion <a href="/contact-webmaster">contact the webmaster</a>.</small>
-</p></div>
-</div>
-              </section>
-      </div>
-        <!-- <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; CareerSource NCFL 2015</p>
-            </div>
-        </div> -->
-        <!-- /.row -->
-</footer>
-
-<!-- footer -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- AppJS -->
-    <script src="js/app.js"></script>
-
+  <script src="js/test.js"></script>
 </body>
 </html>
