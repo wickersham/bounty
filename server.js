@@ -2,7 +2,7 @@ var express = require("express");
 var server = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var program = require("./models/Program");
+var Program = require("./models/Program");
 
 mongoose.connect("mongodb://localhost/programDatabase");
 
@@ -26,6 +26,7 @@ server.get("/api/programs", function(req, res){
 });
 
 server.post("/api/programs", function(req, res){
+    console.log(req.body);
     var program = new Program({
       programName:      req.body.programName,
       // minCost:          req.body.minCost,

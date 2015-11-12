@@ -16,10 +16,10 @@
 
 
 </head>
-<body ng-app = "ngPrograms">
+<body ng-app = "ngPrograms" ng-controller="ProgramController">
   <div class="container">
-      <form class="col-md-8">
-          <div class="form-group well" ng-submit = "createProgram">
+      <form class="col-md-8" ng-submit = "createProgram()">
+          <div class="form-group well">
               <input type="text" class="form-control" placeholder=" Program Name " ng-model="programData.programName ">
           </div>
           <!-- <div class="form-group well">
