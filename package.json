@@ -1,7 +1,7 @@
 {
   "name": "bounty",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a project undertaken by the Gainesville Dev Academy in an attempt to claim a bounty from Study Edge.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/wickersham/bounty#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "mongoose": "^4.2.5",
     "morgan": "^1.6.1"
   },
   "devDependencies": {
