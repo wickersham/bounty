@@ -1,7 +1,5 @@
 angular.module("ngPrograms", []);
 
-console.log("Yes, I'm here");
-
 angular.module("ngPrograms")
         .controller("ProgramController", function($scope, $http){
           $scope.programData = {};
@@ -16,14 +14,10 @@ angular.module("ngPrograms")
           };
 
           $scope.getProgram = function(){
-            $http.get("/api/programs").then(function(){
-              $scope.programs = [];
-              $http.get("/api/programs")
-                  .then(function(response){
-                    $scope.programs = response.data;
-                    console.log($scope.programs);
-                  });
+            $http.get("/api/programs")
+              .then(function(response){
+                  $scope.programs = response.data;
+                  console.log($scope.programs);
             });
           };
-
         });

@@ -1,7 +1,7 @@
 {
   "name": "bounty",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a project undertaken by the Gainesville Dev Academy in an attempt to claim a bounty from Study Edge.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
