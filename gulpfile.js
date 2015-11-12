@@ -11,13 +11,14 @@ gulp.task("default", function(){
 //This is where code for default task goes
 });
 
-//minifies and concats for load speed.
+//This is a sub task I teased out from the js tasks to create a JavaScript hint tool to help with coding.
 gulp.task("hint", function(){
     gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
         .pipe(jshint())
         .pipe(jshint.reporter("default"))
 });
 
+//minifies and concats for load speed.
 gulp.task("js-to-build", function(){
     return gulp.src("public/js/**/*.min.js")
         .pipe(gulp.dest("build/js"))
@@ -40,12 +41,11 @@ gulp.task("css", ["css-to-build"], function(){
         .pipe(mcss())
         .pipe(concat("main.css"))
         .pipe(gulp.dest("build/css"))
-
 });
 
 gulp.task("build", ["js", "css"])
 
-//Tests, tests, and more tests
+//loads tests from test folder and runs them.
 gulp.task("test", function(){
     return gulp.src(["test/**/*.js"], {read:false})
                 .pipe(mocha({reporter: "spec"}))
