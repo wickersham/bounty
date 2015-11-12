@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app = "ngPrograms">
 <head>
   <meta charset="UTF-8">
   <title>what the hell</title>
@@ -16,11 +16,11 @@
 
 
 </head>
-<body ng-app = "ngPrograms">
-  <div class="container">
-      <form class="col-md-8">
-          <div class="form-group well" ng-submit = "createProgram">
-              <input type="text" class="form-control" placeholder=" Program Name " ng-model="programData.programName ">
+<body>
+  <div class="container" controller="ProgramController">
+      <form class="col-md-8"  ng-submit="createProgram()">
+          <div class="form-group well">
+              <input type="text" class="form-control" placeholder="Program Name" ng-model="programData.programName ">
           </div>
           <!-- <div class="form-group well">
               <input type="text" class="form-control" placeholder=" Minimum Cost " ng-model="programData.minCost ">
@@ -101,9 +101,9 @@
               <input type="text" class="form-control" placeholder=" in person " ng-model="programData.inPerson ">
           </div> -->
 
-          <button class="btn btn-primary" type="submit">Submit Program</button>
+          <button class="btn btn-primary" type="submit" >Submit Program</button>
 
-          <button class="btn btn-success" type="button" ng-click="getProgram()">Get Program</button>
+          <!-- <button class="btn btn-success" type="button" ng-click="getProgram()">Get Program</button> -->
 
       </form>
   </div>

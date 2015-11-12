@@ -2,7 +2,7 @@ var express = require("express");
 var server = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var program = require("./models/Program");
+var Program = require("./models/Program");
 
 mongoose.connect("mongodb://localhost/programDatabase");
 

@@ -1,5 +1,7 @@
 angular.module("ngPrograms", []);
 
+console.log("Yes, I'm here");
+
 angular.module("ngPrograms")
         .controller("ProgramController", function($scope, $http){
           $scope.programData = {};
