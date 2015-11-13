@@ -1,7 +1,11 @@
-process.env.NODE_ENV = "test"
-describe("Server-side test", function(){
-    it("should send home page on get request", function(){
-        //write a get request to server, success if it responds with index.html
-        
-    });
+var assert = require("chai").assert;
+var http   = require("http");
+var server = require("../server.js");
+
+it("should return a 200 response", function (done) {
+
+   http.get("http://localhost:8080", function (res) {
+       assert.equal(res.statusCode, 200);
+       done();
+   });
 });

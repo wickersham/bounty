@@ -45,9 +45,22 @@ gulp.task("css", ["css-to-build"], function(){
 
 gulp.task("build", ["js", "css"])
 
-//loads tests from test folder and runs them.
+//loads mocha tests from test folder and runs them.
 gulp.task("test", function(){
     return gulp.src(["test/**/*.js"], {read:false})
                 .pipe(mocha({reporter: "spec"}))
                 .on("error", util.log);
+});
+
+//loads qunit tests from test folder and runs them
+gulp.task("qunit-test", function(){
+    return gulp.src("./test/programs-test.html")
+                .pipe(qunit());
+});
+
+//hints for tests!
+gulp.task("test-hint", function(){
+    return gulp.src("test/**/*.js")
+        .pipe(jshint())
+        .pipe(jshint.reporter("default"))
 });
