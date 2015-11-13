@@ -1,6 +1,6 @@
 $(document).ready(function(){
    var fixedTable = $("#fixed-table");
-   var contentArea = $("#content-section-b")
+   var contentArea = $("#content-section-b");
    var navHomeY = fixedTable.offset().top;
    console.log(navHomeY);
    var isFixed = false;
