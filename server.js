@@ -67,4 +67,6 @@ server.post("/api/programs", function(req, res){
 
 server.listen(port, function() {
     console.log("now listening on port " + port)
-})
+});
+
+module.exports = server;

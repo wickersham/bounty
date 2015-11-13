@@ -1,6 +1,12 @@
+var express = require("express");
+var app = express();
 var assert = require("chai").assert;
 var http   = require("http");
 var server = require("../server.js");
+var request = require("supertest");
+// app.post("/api/programs", function(req, res){
+//   res.send(200,{"program":"yeah"});
+// });
 
 it("should return a 200 response", function (done) {
 
@@ -20,7 +26,14 @@ it("should return a get request", function(done){
     });
 });
 
+it("should post to database", function(done){
+    request(server)
+      .post("/api/programs")
+      .send({"why":"why me"})
+      .expect(200);
+      done();
 
+});
 
 
 // process.env.NODE_ENV = "test"
