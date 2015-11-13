@@ -43,10 +43,10 @@ gulp.task("css", ["css-to-build"], function(){
         .pipe(gulp.dest("build/css"))
 });
 
-gulp.task("build", ["js", "css"])
+gulp.task("build", ["js", "css"]);
 
 //loads mocha tests from test folder and runs them.
-gulp.task("test", function(){
+gulp.task("mocha-test", function(){
     return gulp.src(["test/**/*.js"], {read:false})
                 .pipe(mocha({reporter: "spec"}))
                 .on("error", util.log);
@@ -57,6 +57,8 @@ gulp.task("qunit-test", function(){
     return gulp.src("./test/programs-test.html")
                 .pipe(qunit());
 });
+
+gulp.task("test", ["mocha-test", "qunit-test"]);
 
 //hints for tests!
 gulp.task("test-hint", function(){
