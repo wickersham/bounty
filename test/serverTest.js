@@ -1,7 +1,40 @@
-process.env.NODE_ENV = "test"
-describe("Server-side test", function(){
-    it("should send home page on get request", function(){
-        //write a get request to server, success if it responds with index.html
-        
+var assert = require("chai").assert;
+var http   = require("http");
+var server = require("../server.js");
+
+it("should return a 200 response", function (done) {
+
+    http.get("http://localhost:8080", function (res) {
+        assert.equal(res.statusCode, 200);
+        done();
     });
 });
+
+it("should return a get request", function(done){
+    http.get("http://localhost:8080/api/programs", function(res){
+        assert.equal(res.response);
+        done();
+    });
+});
+
+
+
+
+// process.env.NODE_ENV = "test"
+//
+// //So
+// describe("Server-side test", function(){
+//    it("Returns index.html on get '/'", function(){
+//      http.get("http://localhost:8080", function(){
+//
+//      });
+//    });
+//
+//    it("Returns {} on get '/api/programs'", function(){
+//
+//    });
+//
+//    it("Return a json on post '/api/programs'", function(){
+//
+//    });
+// });
