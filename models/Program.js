@@ -4,25 +4,55 @@ var Schema = mongoose.Schema;
 
 //user models
 var programSchema = new Schema({
-    programName: String,
-    minCost: Number,
-    maxCost: Number,
+    programName: {
+                    type: String,
+                    required: true
+                 },
+    minCost:     {
+                    type: Number,
+                    min: 0,
+                    required: true
+                 },
+    maxCost:     {
+                    type: Number,
+                    min: 0,
+                    required: true
+                 },
     certificate: String,
-    timeline: String,
+    timeline:    {
+                    type: String,
+                    required: true
+                 },
     meals: String,
     affiliation: String,
     otherBenefits: String,
-    ageMin: Number,
-    ageMax: Number,
+    ageMin:      {  type: Number,
+                    min: 0,
+                    required: true
+                 },
+    ageMax:      { 
+                    type: Number,
+                    min: 0,
+                    required: true
+                 },   
     pastSuccess: String,
     pastParticipants: String,
     wordOut: String,
     funded: String,
     impediments: String,
-    numParticipants: Number,
-    description: String,
+    numParticipants: {
+                        type: Number,
+                        min: 0
+                     },
+    description:    {
+                        type: String,
+                        required: true
+                    },
     programUrl: String,
-    location: String,
+    location:       {
+                        type: String,
+                        required: true
+                    },
     otherComments: String,
     partners: String,
     scholarships: String,
@@ -30,7 +60,10 @@ var programSchema = new Schema({
     measureSuccess: String,
     NCFLFunded: String,
     bringDayOne: String,
-    inPerson: String
+    inPerson:       {
+                        type: String,
+                        required: true
+                    }
 });
 
 var Program = mongoose.model("Program", programSchema);
