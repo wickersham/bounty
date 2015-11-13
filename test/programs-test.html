@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="../public/js/app.js"></script>
-</head>
-<body>
-    <script>
-    function test (then, expected){
-        results.total++;
-    //insert function here!
-        var result = location();
-        if(result !== expected){
-            results.bad++;
-            console.log("Expected " + expected + ", but was " + result);
-        }
+function test (then, expected){
+    results.total++;
+//insert function here!
+    var result = location();
+    if(result !== expected){
+        results.bad++;
+        console.log("Expected " + expected + ", but was " + result);
     }
+}
 
-    var results = {
-        total: 0,
-        bad: 0
-    }
+var results = {
+    total: 0,
+    bad: 0
+}
 
-    test("", "")
-    </script>
-        
-</body>
-</html>
+test("", "")
