@@ -6,6 +6,7 @@ var concat = require("gulp-concat");
 var mcss = require("gulp-mcss");
 var mocha = require("gulp-mocha");
 var util = require("gulp-util");
+var qunit = require("gulp-qunit");
 
 gulp.task("default", function(){
 //This is where code for default task goes
@@ -52,10 +53,10 @@ gulp.task("mocha-test", function(){
                 .on("error", util.log);
 });
 
-//loads qunit tests from test folder and runs them
+//loads qunit tests from test folder and runs them, commented until there is a functional test.
 gulp.task("qunit-test", function(){
-    return gulp.src("./test/programs-test.html")
-                .pipe(qunit());
+//    return gulp.src("./test/programs-test.html")
+//                .pipe(qunit());
 });
 
 gulp.task("test", ["mocha-test", "qunit-test"]);
