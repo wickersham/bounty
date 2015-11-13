@@ -11,8 +11,11 @@ it("should return a 200 response", function (done) {
 });
 
 it("should return a get request", function(done){
-    http.get("http://localhost:8080/api/programs", function(res){
-        assert.equal(res.response);
+    http.get("http://localhost:8080/api/programs", function(req, res){
+      var body = '';
+        req.on('data', function (chunk) {
+          console.log(body += chunk.toString());
+        });
         done();
     });
 });
