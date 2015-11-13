@@ -51,3 +51,9 @@ gulp.task("test", function(){
                 .pipe(mocha({reporter: "spec"}))
                 .on("error", util.log);
 });
+
+gulp.task("test-hint", function(){
+    return gulp.src("test/**/*.js")
+        .pipe(jshint())
+        .pipe(jshint.reporter("default"))
+});
