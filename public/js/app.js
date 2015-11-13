@@ -1,10 +1,12 @@
-$( document ).ready(function(){
+$(document).ready(function(){
    var fixedTable = $("#fixed-table");
    var contentArea = $("#content-section-b")
    var navHomeY = fixedTable.offset().top;
    console.log(navHomeY);
    var isFixed = false;
    var $w = $(window);
+
+
 
    $w.scroll(function(){
        var scrollTop = $w.scrollTop();
@@ -37,3 +39,26 @@ $( document ).ready(function(){
    });
 
 });
+
+var response = [
+      {
+        name: "me"
+      },
+      {
+        name: "you"
+      }
+    ];
+
+$.handlebars({
+    templatePath: 'templates'
+});
+
+// now this will fetch <path/to/templates/content.hbs>
+$('#test').render('test', {
+    employer: 'Hello',
+    field2: 'world!',
+    programs: response
+});
+//
+// var source   = $("#test").html();
+// var template = Handlebars.compile(source);

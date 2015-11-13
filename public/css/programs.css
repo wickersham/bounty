@@ -1,0 +1,102 @@
+/*!
+ * Start Bootstrap - 1 Col Portfolio HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* new stuff starts here ends before .color*/
+#CS{
+    height: 40%;
+    width: 40%; 
+}
+.blue{
+    color: #4878A8;    
+}
+.green{
+    color: #17A761;
+}
+.dark-orange {
+    color: darkorange;
+}
+.color{
+background-color: white;
+}
+
+#selection-header{
+    background-color: #BCBCBC;
+    height: 54.5px;
+    border-radius: 20px;
+}
+#selection-header div{
+    margin: 0 3em;
+}
+.pull-left{
+    float: left;
+    display: inline-block;   
+}
+
+#page-header{
+    padding-left: 45px;
+}
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.box  {
+    background-color: lightsteelblue;
+    border-radius: 20px;
+    height: 20em;
+    width: 40em;
+    color: black;
+}
+
+.box h5,p{ 
+    font-weight: bold;
+    position: relative;
+}
+
+
+.box h5{
+    color: white;
+
+} 
+
+.box p.location{
+    font-weight: 800;
+    font-size: 1.3em;
+    color: white;
+    top: 90px;    
+    float: left;
+    line-height: 2em;
+}
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: darkorange;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(0,0,0,0.7);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: darkorange;
+    background-color: rgba(255,255,255,0.8);
+}
+
