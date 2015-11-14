@@ -8,13 +8,34 @@ var request = require("supertest");
 //   res.send(200,{"program":"yeah"});
 // });
 
-it("should return a 200 response", function (done) {
 
+//tests that home route works on the server
+it("home page returns a 200 response", function (done) {
     http.get("http://localhost:8080", function (res) {
         assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
         done();
     });
 });
+
+//tests that the submit route works on the server
+it("submit page returns a 200 response", function(done){
+    http.get("http://localhost:8080/submit", function(res){
+        assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
+        done();
+    });
+});
+
+//tests that the list route works on the server
+it("list page returns a 200 response", function(done){
+    http.get("http://localhost:8080/list", function(res){
+        assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
+        done();
+    });
+});
+
 
 it("should return a get request", function(done){
     http.get("http://localhost:8080/api/programs", function(req, res){
@@ -25,6 +46,7 @@ it("should return a get request", function(done){
         done();
     });
 });
+
 
 it("should post to database", function(done){
     request(server)
