@@ -22,26 +22,26 @@ gulp.task("hint", function(){
 //minifies and concats for load speed.
 gulp.task("js-to-build", function(){
     return gulp.src("public/js/**/*.min.js")
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest("build/public/js"))
 });
 
 gulp.task("js", ["hint", "js-to-build"], function(){
     return gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
         .pipe(uglify())
         .pipe(concat("app.js"))
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest("build/public/js"))
 });
 
 gulp.task("css-to-build", function(){
     return gulp.src("public/css/**/*.min.css")
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("build/public/css"))
 });
 
 gulp.task("css", ["css-to-build"], function(){
     return gulp.src(["public/css/**/*.css", "!public/css/**/*.min.css"])
         .pipe(mcss())
         .pipe(concat("main.css"))
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("build/public/css"))
 });
 
 gulp.task("build", ["js", "css"]);
