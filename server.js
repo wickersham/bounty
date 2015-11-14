@@ -18,9 +18,15 @@ server.get("/", function(req, res) {
     res.sendFile("public/index.html");
 });
 
+
+server.get("/list", function(req, res){
+    res.sendFile("public/pages/publicView.html", {root: __dirname});
+});
+
 server.get("/api/programs", function(req, res){
     Program.find({}, function(err, response){
         if(err)console.log(err);
+        console.log(response);
         res.json(response);
     });
 });
