@@ -43,7 +43,7 @@ server.get("/api/programs/id/:id", function(req, res){
 });
 
 server.get("/api/programs/time/:timeline", function(req, res){
-  Program.find({"timeline" req.params.timeline}, function(err, programs) {
+  Program.find({"timeline": req.params.timeline}, function(err, programs) {
     if(err) {
       console.log(err);
     }
@@ -101,7 +101,7 @@ server.post("/api/programs", function(req, res){
 });
 
 server.listen(port, function() {
-    console.log("now listening on port " + port)
-})
+    console.log("now listening on port " + port);
+});
 
 module.exports = server;
