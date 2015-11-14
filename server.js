@@ -18,9 +18,12 @@ server.get("/", function(req, res) {
     res.sendFile("public/index.html");
 });
 
+server.get("/submit", function(req, res) {
+  res.sendFile("public/pages/forms.html", {root: __dirname});
+});
 
-server.get("/list", function(req, res){
-    res.sendFile("public/pages/publicView.html", {root: __dirname});
+server.get("/list", function(req, res) {
+  res.sendFile("public/pages/publicView.html", {root: __dirname});
 });
 
 server.get("/api/programs", function(req, res){
@@ -30,6 +33,33 @@ server.get("/api/programs", function(req, res){
         res.json(response);
     });
 });
+
+server.get("/api/programs/id/:id", function(req, res){
+  Program.findOne({_id: req.params.id}, function(err, programs) {
+    if(err) {
+      console.log(err);
+    }
+    res.send(programs);
+  });
+});
+
+server.get("/api/programs/time/:timeline", function(req, res){
+  Program.find({"timeline": req.params.timeline}, function(err, programs) {
+    if(err) {
+      console.log(err);
+    }
+    res.send(programs);
+  });
+});
+
+// server.get("/api/programs/", function(req, res){
+//   Program.find({}, function(err, programs) {
+//     if(err) {
+//       console.log(err);
+//     }
+//     res.send(programs);
+//   });
+// });
 
 server.post("/api/programs", function(req, res){
     console.log(req.body);
@@ -72,7 +102,7 @@ server.post("/api/programs", function(req, res){
 });
 
 server.listen(port, function() {
-    console.log("now listening on port " + port)
+    console.log("now listening on port " + port);
 });
 
 module.exports = server;

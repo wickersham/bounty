@@ -67,3 +67,9 @@ gulp.task("test-hint", function(){
         .pipe(jshint())
         .pipe(jshint.reporter("default"))
 });
+
+gulp.task("server-hint", function(){
+    return gulp.src("server.js")
+        .pipe(jshint())
+        .pipe(jshint.reporter("default"))
+});
