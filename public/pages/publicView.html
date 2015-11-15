@@ -88,6 +88,7 @@
     <!-- Page Content -->
     <div class="container">
 
+<!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
         <header id="selection-header">
             <div class="pull-left">
             <h5>Location:</h5>
@@ -139,12 +140,12 @@
                <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p> 
                <p></p>
                <h4>(352)555-5555</h4>
+<!--Why is this displaying after the button?-->
                 <p class="location">Location</p>
-               
-               
-</div>
-            <div class="col-md-5">
-                <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
+<!--Moved button inside box, might need some push right magic-->
+                <div class="col-md-5">
+                    <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
             </div>
         </div>
         <!-- /.row -->
@@ -158,6 +159,7 @@
                     <li>
                         <a href="#">&laquo;</a>
                     </li>
+<!--Needs function to generate dynamically with data set size -->
                     <li class="active">
                         <a href="#">1</a>
                     </li>
