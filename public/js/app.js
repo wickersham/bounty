@@ -40,29 +40,6 @@ $(document).ready(function(){
 
 });
 
-var response = [
-      {
-        name: "me"
-      },
-      {
-        name: "you"
-      }
-    ];
-
-$.handlebars({
-    templatePath: 'templates'
-});
-
-// now this will fetch <path/to/templates/content.hbs>
-$('#test').render('test', {
-    employer: 'Hello',
-    field2: 'world!',
-    programs: response
-});
-//
-// var source   = $("#test").html();
-// var template = Handlebars.compile(source);
-
 // Smooth Scroll jQuery -- Please don't fuck with this.
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

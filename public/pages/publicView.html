@@ -12,9 +12,10 @@
     <title>Programs Offered</title>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../css/programs.css" rel="stylesheet">
+    <!-- Extra jQuery snippet, but URL instead of local -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 <body>
@@ -131,28 +132,26 @@
                 </h3>
             </div>
         </div>
-        <!-- /.row -->
 
-        <!-- Program One -->
-        <div class="row" >
-            <div class="col-md-7 box">
-               <p>Bradford Tech Center</p>
-               <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-               <p></p>
-               <h4>(352)555-5555</h4>
-<!--Why is this displaying after the button?-->
-                <p class="location">Location</p>
-<!--Moved button inside box, might need some push right magic-->
-                <div class="col-md-5">
-                    <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-
-
-</div>
+      <!-- Program One   Alex's stored program example -->
+      <!-- <div class="row" >
+        <div class="col-md-7 box">
+          <p>Bradford Tech Center</p>
+            <h5>Description:</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+            <h4>(352)555-5555</h4>
+              <p class="location">Location</p>
+          <div class="col-md-5">
+            <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
         </div>
-        <!-- /.row -->
+      </div> -->
+
+      <!-- Alex, don't mess with this! -->
+      <div id="viewpage"></div>
 
         <hr>
+
   </div>
     <!-- Pagination -->
         <div class="row text-center">
@@ -219,8 +218,12 @@
 </footer>
    <!-- jQuery -->
     <script src="../js/jquery.min.js"></script>
-
+    <!-- HandlebarsJS -->
+    <script src="../js/jquery-handlebars-1.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Handlebars template for programs list -->
+    <script src="../js/template.js"></script>
 </body>
 </html>
