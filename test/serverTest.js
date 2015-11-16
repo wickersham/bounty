@@ -4,9 +4,7 @@ var assert = require("chai").assert;
 var http   = require("http");
 var server = require("../server.js");
 var request = require("supertest");
-// app.post("/api/programs", function(req, res){
-//   res.send(200,{"program":"yeah"});
-// });
+
 
 it("should return a 200 response", function (done) {
 
@@ -34,23 +32,3 @@ it("should post to database", function(done){
       done();
 
 });
-
-
-// process.env.NODE_ENV = "test"
-//
-// //So
-// describe("Server-side test", function(){
-//    it("Returns index.html on get '/'", function(){
-//      http.get("http://localhost:8080", function(){
-//
-//      });
-//    });
-//
-//    it("Returns {} on get '/api/programs'", function(){
-//
-//    });
-//
-//    it("Return a json on post '/api/programs'", function(){
-//
-//    });
-// });
