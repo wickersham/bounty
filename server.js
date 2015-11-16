@@ -22,8 +22,10 @@ server.get("/submit", function(req, res) {
   res.sendFile("public/pages/forms.html", {root: __dirname});
 });
 
+
 server.get("/list", function(req, res) {
-  res.sendFile("public/pages/publicView.html", {root: __dirname});
+  res.sendFile(__dirname+"/public/pages/publicView.html");
+
 });
 
 server.get("/api/programs", function(req, res){

@@ -23,7 +23,7 @@
   <header class="container">
    <h1>
     <span class="blue">CareerSource</span><span class="dark-orange"> - </span><span class="green">Resource Guide</span>
-</h1>    
+</h1>
  </header>
 
 
@@ -56,10 +56,10 @@
     <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
     <div class="container">
-    
+
             <!-- Brand and toggle get grouped for better mobile display -->
      <div class="navbar-header">
-       
+
        <!-- Trying to put CSNCFL image in header -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -68,7 +68,7 @@
                     <span class="icon-bar"></span>
         </button>
            <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
-            
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse head" id="bs-example-navbar-collapse-1">
@@ -79,15 +79,16 @@
                     <li>
                         <a href="#copyright">Contact</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <!-- Page Content -->
     <div class="container">
 
+<!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
         <header id="selection-header">
             <div class="pull-left">
             <h5>Location:</h5>
@@ -139,16 +140,18 @@
         <div class="row" >
             <div class="col-md-7 box">
                <p>Bradford Tech Center</p>
-               <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p> 
+               <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
                <p></p>
                <h4>(352)555-5555</h4>
+<!--Why is this displaying after the button?-->
                 <p class="location">Location</p>
-               
-               
+<!--Moved button inside box, might need some push right magic-->
+                <div class="col-md-5">
+                    <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+
+
 </div>
-            <div class="col-md-5">
-                <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
         </div>
         <!-- /.row -->
         <hr>
@@ -160,6 +163,7 @@
                     <li>
                         <a href="#">&laquo;</a>
                     </li>
+<!--Needs function to generate dynamically with data set size -->
                     <li class="active">
                         <a href="#">1</a>
                     </li>
@@ -185,42 +189,36 @@
 
         <hr>
 
-        <!-- Footer from noel & careersource -->
-   <footer>
-     <div class="wrapper grid-block">
-        <footer id="footer" class="grid-block uk-float-left">
-         </footer>
-
-         <section id="copyright" class="grid-block uk-float-right">
-           <div class="module   deepest">
-
-
-<div>
-<p align="center">
-<a href="http://careersourceflorida.com"><img src="../img/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<a href="http://jobcenter.usa.gov"><img src="../img/logos/ajc_banner.png" style="vertical-align:middle" alt="American Job Center"></a>
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<a href="http://employflorida.com"><img src="../img/logos/EF_WFP_LogoBrand_Blank_PMS.png" style="vertical-align:middle" alt="Employ Florida"></a>
-</p>
-<p align="center">
-<small>© 2015 CareerSource North Central Florida / Funded by CareerSource North Central Florida as a grantee of funds from the United States Department of Labor. CareerSource North Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this website may be reached by persons using TTY/TDD equipment via the Florida Relay Service at 711. </small>
-</p><p align="center">
-<small> CareerSource North Central Florida takes reports of alleged fraud, waste, and abuse seriously.  To submit a report of fraud, waste, or abuse, <a href="/report-fraud-waste-or-abuse">click here</a>.</small><br>
-<!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
-<br />--><small>To report an issue with the website or make a suggestion <a href="/contact-webmaster">contact the webmaster</a>.</small>
-</p></div>
-</div>
-</section>
-</div>
+        <!-- Footer -->
+<footer id="footer" class="grid-block uk-float-left">
+  <div class="wrapper grid-block">
+    <section id="copyright" class="grid-block uk-float-right">
+      <div class="module   deepest">
+        <div>
+          <p align="center">
+            <a href="http://careersourceflorida.com"><img src="https://careersourcencfl.com/images/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
+            <a href="http://jobcenter.usa.gov"><img src="https://careersourcencfl.com/images/logos/ajc_banner.png" style="vertical-align:middle" alt="American Job Center"></a>
+            <a href="http://employflorida.com"><img src="https://careersourcencfl.com/images/logos/EF_WFP_LogoBrand_Blank_PMS.png" style="vertical-align:middle" alt="Employ Florida"></a>
+          </p>
+          <p align="center">
+            <small>© 2015 CareerSource North Central Florida / Funded by CareerSource North Central Florida as a grantee of funds from the United States Department of Labor. CareerSource North Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this website may be reached by persons using TTY/TDD equipment via the Florida Relay Service at 711. </small>
+          </p>
+          <p align="center">
+            <small> CareerSource North Central Florida takes reports of alleged fraud, waste, and abuse seriously.  To submit a report of fraud, waste, or abuse,
+              <a href="/report-fraud-waste-or-abuse">click here</a>.
+            </small>
+          <br>
+            <!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
+            <br />-->
+            <small>To report an issue with the website or make a suggestion
+              <a href="/contact-webmaster">contact the webmaster</a>.
+            </small>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 </footer>
-
    <!-- jQuery -->
     <script src="../js/jquery.min.js"></script>
 
@@ -228,6 +226,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src = "../js/program.list.js"></script>
     
+
 
 </body>
 </html>

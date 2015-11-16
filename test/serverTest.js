@@ -8,17 +8,38 @@ var request = require("supertest");
 //   res.send(200,{"program":"yeah"});
 // });
 
-it("should return a 200 response", function (done) {
 
+//tests that home route works on the server
+it("home page returns a 200 response", function (done) {
     http.get("http://localhost:8080", function (res) {
         assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
         done();
     });
 });
 
+//tests that the submit route works on the server
+it("submit page returns a 200 response", function(done){
+    http.get("http://localhost:8080/submit", function(res){
+        assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
+        done();
+    });
+});
+
+//tests that the list route works on the server
+it("list page returns a 200 response", function(done){
+    http.get("http://localhost:8080/list", function(res){
+        assert.equal(res.statusCode, 200);
+        if(res.statusCode !== 200) console.log(res.statusCode);
+        done();
+    });
+});
+
+//tests default GET route, might want to rewrite without console.log?
 it("should return a get request", function(done){
     http.get("http://localhost:8080/api/programs", function(req, res){
-      var body = '';
+        var body = '';
         req.on('data', function (chunk) {
           console.log(body += chunk.toString());
         });
@@ -26,6 +47,7 @@ it("should return a get request", function(done){
     });
 });
 
+//tests post route, this should fail the program schema, but I don't know if it is? new test for schema?
 it("should post to database", function(done){
     request(server)
       .post("/api/programs")
@@ -35,22 +57,14 @@ it("should post to database", function(done){
 
 });
 
+//tests get element by id, this test will break when mongod is updated.
+it("should get element by id", function(done){
+    http.get("http://localhost:8080/api/programs/id/:5643e1fef95f414c11299b01", function(req, res){
+        var body = '';
+        req.on('data', function(chunk){
+            console.log(body += chunk.toString());
+        });
+        done();
+    });
+});
 
-// process.env.NODE_ENV = "test"
-//
-// //So
-// describe("Server-side test", function(){
-//    it("Returns index.html on get '/'", function(){
-//      http.get("http://localhost:8080", function(){
-//
-//      });
-//    });
-//
-//    it("Returns {} on get '/api/programs'", function(){
-//
-//    });
-//
-//    it("Return a json on post '/api/programs'", function(){
-//
-//    });
-// });
