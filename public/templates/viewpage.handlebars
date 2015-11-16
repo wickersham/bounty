@@ -1,5 +1,12 @@
+<!-- This is the display form for each program displayed on publicView from storage (mongo) -->
 <p>
+    {{employer}}
+    <br>
   {{#each programs}}
-  <li>{{this.name}}</li>
+    {{this.school}}<br>
+    {{this.desc}}<br>
+    {{this.phone}}<br>
+    {{this.location}}<br>
+    {{this.moreInfo}}
   {{/each}}
 </p>

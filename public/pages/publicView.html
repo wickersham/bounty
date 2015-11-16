@@ -12,10 +12,19 @@
     <title>Programs Offered</title>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+
+    <!-- Custom CSSs -->
     <link href="../css/programs.css" rel="stylesheet">
-    <!-- Extra jQuery snippet, but URL instead of local -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+    <!-- Scripts for dropdowns -->
+      <noscript>
+        <link rel="stylesheet" type="text/css" href="css/noJS.css" />
+      </noscript>
 
 </head>
 <body>
@@ -90,46 +99,219 @@
     <div class="container">
 
 <!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
-        <header id="selection-header">
-            <div class="pull-left">
-            <h5>Location:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">Alachua</option>
-                      <option value="three">Bradford</option>
-            </select>
+
+        <div class="row">
+            <div class="col-sm-3">
+              <div id="one" class="wrapper-dropdown-3" tabindex="1">
+              	<span>Location:</span>
+              	<ul class="dropdown">
+              		<li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+              		<li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
+              		<li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+              	</ul>
+              </div>
             </div>
-            <div class="pull-left">
-               <h5>Cost:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">$1-$50</option>
-                      <option value="three">more than $50</option>
-            </select>
+              <div class="col-sm-3">
+                <div id="two" class="wrapper-dropdown-3" tabindex="1">
+                  <span>Location:</span>
+                  <ul class="dropdown">
+                    <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                    <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                  </ul>
+                </div>
+              </div>
+                <div class="col-sm-3">
+                  <div id="three" class="wrapper-dropdown-3" tabindex="1">
+                    <span>Location:</span>
+                    <ul class="dropdown">
+                      <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                      <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                    </ul>
+                  </div>
+                </div>
+                  <div class="col-sm-3">
+                    <div id="four" class="wrapper-dropdown-3" tabindex="1">
+                      <span>Location:</span>
+                      <ul class="dropdown">
+                        <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                        <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
+                        <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+            <script type="text/jquery">
+              obj.one.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var one = new DropDown( $('#one') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+            <script type="text/jquery">
+              obj.two.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var two = new DropDown( $('#two') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+            <script type="text/jquery">
+              obj.three.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var three = new DropDown( $('#three') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+            <script type="text/jquery">
+              obj.four.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var four = new DropDown( $('#four') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+            <br><br><br>
+            <!-- <div class="col-sm-4">
+                   <section class="main">
+                     <div class="wrapper-demo">
+                       <div id="two" class="wrapper-dropdown-3" tabindex="1">
+                         <span>Cost:</span>
+                         <ul class="dropdown">
+                           <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                           <li><a href="#"><i class="icon-truck icon-large"></i>$1-$50</a></li>
+                           <li><a href="#"><i class="icon-plane icon-large"></i>more than $50</a></li>
+                         </ul>
+                       </div>
+                     ​</div>
+                   </section>
+            </div> -->
+            <!-- <div class="col-sm-4">
+                  <section class="main">
+                    <div class="wrapper-demo">
+                      <div id="three" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Time Length:</span>
+                        <ul class="dropdown">
+                          <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                          <li><a href="#"><i class="icon-truck icon-large"></i>less than 1 hour</a></li>
+                          <li><a href="#"><i class="icon-plane icon-large"></i>more than 1 hour</a></li>
+                        </ul>
+                      </div>
+                    ​</div>
+                  </section>
+             </div>
+            <div class="col-sm-4"> -->
+
+              <!-- demo -->
+              <div id="demo">
+
+                 <!-- panel -->
+                 <!-- <div class="jplist-panel">
+
+                   <script type="text/jquery">
+                   $('document').ready(function(){
+
+                      $('#demo').jplist({
+                         itemsBox: '.list'
+                         ,itemPath: '.list-item'
+                         ,panelPath: '.jplist-panel'
+                      });
+
+                   });
+                   </script>
+
+                    <!-- bootstrap filter dropdown control -->
+                    <div
+                       class="dropdown pull-left"
+                       data-control-type="boot-filter-drop-down"
+                       data-control-name="category-filter"
+                       data-control-action="filter">
+
+                       <button
+                          class="btn btn-primary dropdown-toggle"
+                          type="button"
+                          data-toggle="dropdown"
+                          id="dropdown-menu-1"
+                          aria-expanded="true">
+                          <span data-type="selected-text">Location:</span>
+                          <span class="caret"></span>
+                       </button>
+
+                       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu-1">
+
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#" data-path=".architecture">none</a>
+                          </li>
+
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#" data-path=".christmas" data-default="true">Alachua</a>
+                          </li>
+
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#" data-path=".food">Bradford</a>
+                          </li>
+                       </ul>
+                    </div>
+
+
+                 </div> -->
+
+                 <!-- HTML data -->
+                 <div class="list">
+
+                    <!-- item 1 -->
+                    <div class="list-item">
+
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="list-item">
+
+                    </div>
+
+
+
+                 </div>
+
+              </div>
             </div>
-            <div class="pull-left">
-               <h5>Time length:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 1 hour</option>
-                      <option value="three">more than 1 hour</option>
-            </select>
-            </div>
-            <div class="pull-left">
-            <h5>Age Range:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 16</option>
-                      <option value="three">more than 16</option>
-            </select>
-            </div>
-         </header>
+          </div>
+         <!-- </header> -->
 <!-- Page/View Heading -->
+
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header">List of Potential Employers:
+                <!-- <h3 class="page-header">List of Potential Employers:
                     <small>Click More Info for details about each program</small>
-                </h3>
+                </h3> -->
             </div>
         </div>
 
@@ -217,13 +399,17 @@
   </div>
 </footer>
    <!-- jQuery -->
+   <!-- jplist core -->
+   <!-- <script src="../js/jplist-core.min.js"></script> -->
+   <!-- jplist bootstrap filter dropdown control -->
+   <!-- <script src="../js/jplist.boot-filter-dropdown.min.js"></script> -->
     <script src="../js/jquery.min.js"></script>
     <!-- HandlebarsJS -->
     <script src="../js/jquery-handlebars-1.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
     <!-- Handlebars template for programs list -->
     <script src="../js/template.js"></script>
+
 </body>
 </html>
