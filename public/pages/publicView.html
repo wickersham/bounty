@@ -91,40 +91,40 @@
 <!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
         <header id="selection-header">
             <div class="pull-left">
-            <h5>Location:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">Alachua</option>
-                      <option value="three">Bradford</option>
+            <h5>County:</h5>
+            <select class="select" id="county">
+                      <option value="none">none</option>
+                      <option value="Alachua">Alachua</option>
+                      <option value="Bradford">Bradford</option>
             </select>
             </div>
             <div class="pull-left">
                <h5>Cost:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">$1-$50</option>
-                      <option value="three">more than $50</option>
+               <select class="select" id="cost">
+                      <option value="none">none</option>
+                      <option value="1-50">$1-$50</option>
+                      <option value="50+">more than $50</option>
             </select>
             </div>
             <div class="pull-left">
                <h5>Time length:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 1 hour</option>
-                      <option value="three">more than 1 hour</option>
+               <select class="select" id="duration">
+                      <option value="none">none</option>
+                      <option value="less than 1 hour">less than 1 hour</option>
+                      <option value="more than 1 hour">more than 1 hour</option>
             </select>
             </div>
             <div class="pull-left">
             <h5>Age Range:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 16</option>
-                      <option value="three">more than 16</option>
+            <select class="select" id="age">
+                      <option value="none">none</option>
+                      <option value="less than 16">less than 16</option>
+                      <option value="more than 16">more than 16</option>
             </select>
             </div>
-    <div class="search">        
+    <div class="search">
             <button class="btn btn-success" id="search">Search</button>
-    </div>     
+    </div>
          </header>
 <!-- Page/View Heading -->
         <div class="row">
@@ -225,7 +225,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
     <script src = "../js/program.list.js"></script>
-    
+
 
 
 </body>
