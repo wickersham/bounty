@@ -63,29 +63,34 @@ server.get("/api/programs/time/:timeline", function(req, res){
 //   });
 // });
 
+//refers to our mongoose schema
 server.post("/api/programs", function(req, res){
     console.log(req.body);
     var program = new Program({
       programName:      req.body.programName,
-      minCost:          req.body.minCost,
-      maxCost:          req.body.maxCost,
+      county:           req.body.county,
+      contactName:      req.body.contactName,
+      email:            req.body.email,
+      phoneNumber:      req.body.phoneNumber,
+      cost:             req.body.cost,
       certificate:      req.body.certificate,
       timeline:         req.body.timeline,
+      timeOfDay:        req.body.timeOfDay,
       meals:            req.body.meals,
       affiliation:      req.body.affiliation,
       otherBenefits:    req.body.otherBenefits,
       ageMin:           req.body.ageMin,
       ageMax:           req.body.ageMax,
+      servePop:         req.body.servePop,
       pastSuccess:      req.body.pastSuccess,
       pastParticipants: req.body.pastParticipants,
       wordOut:          req.body.wordOut,
       funded:           req.body.funded,
       impediments:      req.body.impediments,
-      numParticipants:  req.body.numParticipants,
+      avgNumParticip:   req.body.avgNumParticip,
       description:      req.body.description,
       programUrl:       req.body.programUrl,
       location:         req.body.location,
-      otherComments:    req.body.otherComments,
       partners:         req.body.partners,
       scholarships:     req.body.scholarships,
       parentsInvolved:  req.body.parentsInvolved,
