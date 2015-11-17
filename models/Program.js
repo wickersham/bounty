@@ -12,22 +12,46 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
-    contactName: String,
-    email: String,
-    phoneNumber: String,
+    contactName: {
+                    type: String,
+                    required: true
+                 },
+    email:       {
+                    type: String,
+                    required: true
+                 },
+    phoneNumber: {
+                    type: String,
+                    required: true
+                 },
     cost:        {
                     type: String,
                     required: true
                  },
-    certificate: String,
+    certificate: {
+                    type: String,
+                    required: true
+                 },
     timeline:    {
                     type: String,
                     required: true
                  },
-    timeOfDay: String,
-    meals: String,
-    affiliation: String,
-    otherBenefits: String,
+    timeOfDay:   {
+                    type: String,
+                    required: true
+                 },
+    meals:       {
+                    type: String,
+                    required: true
+                 },
+    affiliation: {
+                    type: String,
+                    required: true
+                 },
+    otherBenefits: {
+                    type: String,
+                    required: true
+                 },
     ageMin:      {  type: Number,
                     min: 0,
                     required: true
@@ -37,35 +61,74 @@ var programSchema = new Schema({
                     min: 0,
                     required: true
                  },
-    pastSuccess: String,
-    pastParticipants: String,
-    wordOut: String,
-    funded: String,
-    impediments: String,
+    pastSuccess: {
+                    type: String,
+                    required: true
+                 },
+    pastParticipants: {
+                    type: String,
+                    required: true
+                 },
+    wordOut:     {
+                    type: String,
+                    required: true
+                 },
+    funded:      {
+                    type: String,
+                    required: true
+                 },
+    impediments: {
+                    type: String,
+                    required: true
+                 },
     avgNumParticip: {
-                        type: Number,
-                        min: 0
-                     },
-    description:    {
-                        type: String,
-                        required: true
-                    },
-    programUrl: String,
-    location:       {
-                        type: String,
-                        required: true
-                    },
-    partners: String,
-    servePop: String,
-    scholarships: String,
-    parentsInvolved: String,
-    measureSuccess: String,
-    NCFLFunded: String,
-    bringDayOne: String,
-    inPerson:       {
-                        type: String,
-                        required: true
-                    }
+                    type: Number,
+                    min: 0
+                  },
+    description: {
+                    type: String,
+                    required: true
+                  },
+    programUrl:   {
+                    type: String,
+                    required: true
+                  },
+    location:     {
+                    type: String,
+                    required: true
+                  },
+    partners:     {
+                    type: String,
+                    required: true
+                  },
+    servePop:     {
+                    type: String,
+                    required: true
+                  },
+    scholarships: {
+                    type: String,
+                    required: true
+                  },
+    parentsInvolved: {
+                    type: String,
+                    required: true
+                  },
+    measureSuccess: {
+                    type: String,
+                    required: true
+                  },
+    NCFLFunded:   {
+                    type: String,
+                    required: true
+                  },
+    bringDayOne:  {
+                    type: String,
+                    required: true
+                  },
+    inPerson:     {
+                    type: String,
+                    required: true
+                  }
 });
 
 var Program = mongoose.model("Program", programSchema);
