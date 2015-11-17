@@ -12,7 +12,7 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
-    contactName: type: String,
+    contactName: String,
     email: String,
     phoneNumber: String,
     cost:        {
@@ -56,6 +56,7 @@ var programSchema = new Schema({
                         required: true
                     },
     partners: String,
+    servePop: String,
     scholarships: String,
     parentsInvolved: String,
     measureSuccess: String,

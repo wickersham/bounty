@@ -80,6 +80,7 @@ server.post("/api/programs", function(req, res){
       otherBenefits:    req.body.otherBenefits,
       ageMin:           req.body.ageMin,
       ageMax:           req.body.ageMax,
+      servePop:         req.body.servePop,
       pastSuccess:      req.body.pastSuccess,
       pastParticipants: req.body.pastParticipants,
       wordOut:          req.body.wordOut,
