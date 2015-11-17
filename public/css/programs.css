@@ -4,6 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* new stuff starts here ends before .color*/
+.head{
+    padding-top: 10px;
+}
+.search{
+    padding-top: 20px;
+}
+
 #CS{
     height: 40%;
     width: 40%; 
