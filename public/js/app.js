@@ -88,7 +88,7 @@ $(function() {
     getIndex : function() {
       return this.index;
     }
-  }
+  };
 
   $(function() {
 

@@ -7,7 +7,7 @@ module.exports = {
     // getProgramsByCounty: getProgramsByCounty,
     // getProgramsByCost: getProgramsByCost,
     getProgramsByTime: getProgramsByTime,
-}
+};
 
 //Named functions for routes
 

@@ -59,7 +59,8 @@ gulp.task("qunit-test", function(){
                 .pipe(qunit());
 });
 
-gulp.task("test", ["mocha-test", "qunit-test"]);
+//runs all tests
+gulp.task("tests", ["mocha-test", "qunit-test"]);
 
 //hints for tests!
 gulp.task("test-hint", function(){
@@ -68,8 +69,12 @@ gulp.task("test-hint", function(){
         .pipe(jshint.reporter("default"))
 });
 
+//hints for the server!
 gulp.task("server-hint", function(){
-    return gulp.src("server.js")
+    return gulp.src(["server.js", "server/**/*.js"])
         .pipe(jshint())
         .pipe(jshint.reporter("default"))
 });
+
+//runs all hints
+gulp.task("hints", ["hint", "test-hint", "server-hint"]);   
