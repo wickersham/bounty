@@ -60,6 +60,7 @@ server.get("/api/programs/time/:timeline", function(req, res){
 //   });
 // });
 
+//refers to our mongoose schema
 server.post("/api/programs", function(req, res){
     console.log(req.body);
     var program = new Program({
