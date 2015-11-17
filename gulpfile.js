@@ -55,8 +55,8 @@ gulp.task("mocha-test", function(){
 
 //loads qunit tests from test folder and runs them, commented until there is a functional test.
 gulp.task("qunit-test", function(){
-//    return gulp.src("./test/programs-test.html")
-//                .pipe(qunit());
+    return gulp.src("test/*.html")
+                .pipe(qunit());
 });
 
 gulp.task("test", ["mocha-test", "qunit-test"]);

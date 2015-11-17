@@ -1,7 +1,23 @@
 $(document).ready(function(){
     console.log("working!");
+    
+//Pulling apart parts of submit form for testing purposes
+    function posting(dataObject){
+        $.post("/api/programs", dataObject, function(){
+            console.log("POSTING!!");
+        })
+            .done(function(){
+                console.log("success");
+            })
+//If this works it needs to inheret event.preventDefault()
+            .fail(function(){
+                console.log("fail");
+            });    
+    }
 //Using .submit to handle the form and link the submit button to an action.
     $( "#programForm" ).submit(function( event ){
+//This will stop the submit funtion from refreshing page, possibly for missing form pieces.
+        event.preventDefault();
         console.log("submitted!");
 //building object from form.html's inputs
         var formObject = {};
@@ -24,18 +40,9 @@ $(document).ready(function(){
         formObject.NCFLFunded = $( "#NCFLFunded" ).val();
         formObject.inPerson = $( "#inPerson" ).val();
         console.log(formObject);
-//This will stop the submit funtion from refreshing page, possibly for missing form pieces.
-        $.post("/api/programs", formObject, function(){
-            console.log("POSTING!!");
-        })
-            .done(function(){
-                console.log("success");
-            })
-//If this works it needs to inheret event.preventDefault()
-            .fail(function(){
-                console.log("fail");
-            });
-        event.preventDefault();
+
+        posting(formObject);
+
     });
 
 });
