@@ -3,6 +3,7 @@
 module.exports = {
     getPrograms: getPrograms,
     getProgramsById: getProgramsById,
+    // to be implimented
     // getProgramsByCounty: getProgramsByCounty,
     // getProgramsByCost: getProgramsByCost,
     getProgramsByTime: getProgramsByTime,
@@ -31,30 +32,12 @@ var getProgramsByTime = function() {
     });
 };
 
+// old mysql function kept for reference
+
 // function getProgramsByCounty(req, res){
 //   //programs/county/:county
 //     var county = req.body.county;
 //     connection.query("SELECT * FROM programs where county = '"+connection.escape(id)+"'", function(err, rows, fields){
-//         if(err){ console.error(err); return;}
-//         res.json(rows);
-//
-//     });
-// };
-//
-// function getProgramsByCost(req, res){
-//   //programs/cost/:cost
-//   var cost = req.body.cost;
-//   connection.query("SELECT * FROM programs where cost = '"+connection.escape(cost)+"'", function(err, rows, fields){
-//       if(err){ console.error(err); return;}
-//       res.json(rows);
-//
-//   });
-// };
-//
-// function getProgramsByTime(req, res){
-//       //programs/time/:time
-//     var time = req.body.time;
-//     connection.query("SELECT * FROM programs where time = '"+connection.escape(time)+"'", function(err, rows, fields){
 //         if(err){ console.error(err); return;}
 //         res.json(rows);
 //
