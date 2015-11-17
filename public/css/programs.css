@@ -4,12 +4,25 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* new stuff starts here ends before .color*/
+.pull-right{
+ float: right;     /* css for more info button this relies on size of description which if too long may move the button out of the program object i.e.(blue box)*/
+ padding-left: 110px;
+ padding-top: 30px;
+}
+
+.head{
+    padding-top: 10px;
+}
+.search{
+    padding-top: 20px;
+}
+
 #CS{
     height: 40%;
-    width: 40%; 
+    width: 40%;
 }
 .blue{
-    color: #4878A8;    
+    color: #4878A8;
 }
 .green{
     color: #17A761;
@@ -31,7 +44,7 @@ background-color: white;
 }
 .pull-left{
     float: left;
-    display: inline-block;   
+    display: inline-block;
 }
 
 #page-header{
@@ -40,7 +53,7 @@ background-color: white;
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    
+
 }
 
 footer {
@@ -55,7 +68,7 @@ footer {
     color: black;
 }
 
-.box h5,p{ 
+.box h5,p{
     font-weight: bold;
     position: relative;
 }
@@ -64,13 +77,13 @@ footer {
 .box h5{
     color: white;
 
-} 
+}
 
 .box p.location{
     font-weight: 800;
     font-size: 1.3em;
     color: white;
-    top: 90px;    
+    top: 90px;
     float: left;
     line-height: 2em;
 }
@@ -99,4 +112,3 @@ footer {
     color: darkorange;
     background-color: rgba(255,255,255,0.8);
 }
-
