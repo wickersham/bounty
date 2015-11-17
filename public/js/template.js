@@ -5,8 +5,13 @@ var response = [
         school: "Bradford Tech Center",
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         phone: "555-555-5555",
-        location: "Gainesville, FL",
-        moreInfo: "More info button with #myModel here"
+        location: "Gainesville, FL"
+      },
+      {
+        school: "CSI Academy",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        phone: "555-555-5555",
+        location: "Gainesville, FL"
       }
     ];
 
