@@ -100,7 +100,8 @@
 
 <!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
 
-        <div class="row">
+        <!-- Dropdown one -->
+        <div class="row" style="padding: 30px;">
             <div class="col-sm-3">
               <div id="one" class="wrapper-dropdown-3" tabindex="1">
               	<span>Location:</span>
@@ -111,95 +112,101 @@
               	</ul>
               </div>
             </div>
+            <!-- Script for Dropdown one -->
+            <script type="text/jquery">
+              obj.dd.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var one = new DropDown( $('#dd') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+              <!-- Dropdown two -->
               <div class="col-sm-3">
                 <div id="two" class="wrapper-dropdown-3" tabindex="1">
-                  <span>Location:</span>
+                  <span>Cost:</span>
                   <ul class="dropdown">
                     <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                    <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
-                    <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                    <li><a href="#"><i class="icon-truck icon-large"></i>less than $50</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>more than $50</a></li>
                   </ul>
                 </div>
               </div>
+              <!-- Script for Dropdown two -->
+              <script type="text/jquery">
+                obj.two.on('click', function(event){
+                  $(this).toggleClass('active');
+                  return false;
+                  });
+                //...
+                $(function() {
+                  var two = new DropDown( $('#two') );
+                  $(document).click(function() {
+                  // all dropdowns
+                  $('.wrapper-dropdown-1').removeClass('active');
+                  });
+                });
+              </script>
+              <!-- Dropdown three -->
                 <div class="col-sm-3">
                   <div id="three" class="wrapper-dropdown-3" tabindex="1">
-                    <span>Location:</span>
+                    <span>Time Length:</span>
                     <ul class="dropdown">
                       <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                      <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
-                      <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                      <li><a href="#"><i class="icon-truck icon-large"></i>less than 1 hour</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>more than 1 hour</a></li>
                     </ul>
                   </div>
                 </div>
+                <!-- Script for Dropdown three -->
+                <script type="text/jquery">
+                  obj.three.on('click', function(event){
+                    $(this).toggleClass('active');
+                    return false;
+                    });
+                  //...
+                  $(function() {
+                    var three = new DropDown( $('#three') );
+                    $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                    });
+                  });
+                </script>
+                <!-- Dropdown four -->
                   <div class="col-sm-3">
                     <div id="four" class="wrapper-dropdown-3" tabindex="1">
-                      <span>Location:</span>
+                      <span>Age Range:</span>
                       <ul class="dropdown">
                         <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                        <li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
-                        <li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+                        <li><a href="#"><i class="icon-truck icon-large"></i>foo</a></li>
+                        <li><a href="#"><i class="icon-plane icon-large"></i>bar</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
-
-            <script type="text/jquery">
-              obj.one.on('click', function(event){
-                $(this).toggleClass('active');
-                return false;
-                });
-              //...
-              $(function() {
-                var one = new DropDown( $('#one') );
-                $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-1').removeClass('active');
-                });
-              });
-            </script>
-            <script type="text/jquery">
-              obj.two.on('click', function(event){
-                $(this).toggleClass('active');
-                return false;
-                });
-              //...
-              $(function() {
-                var two = new DropDown( $('#two') );
-                $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-1').removeClass('active');
-                });
-              });
-            </script>
-            <script type="text/jquery">
-              obj.three.on('click', function(event){
-                $(this).toggleClass('active');
-                return false;
-                });
-              //...
-              $(function() {
-                var three = new DropDown( $('#three') );
-                $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-1').removeClass('active');
-                });
-              });
-            </script>
-            <script type="text/jquery">
-              obj.four.on('click', function(event){
-                $(this).toggleClass('active');
-                return false;
-                });
-              //...
-              $(function() {
-                var four = new DropDown( $('#four') );
-                $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-1').removeClass('active');
-                });
-              });
-            </script>
-            <br><br><br>
+                <!-- Script for Dropdown four -->
+                <script type="text/jquery">
+                  obj.four.on('click', function(event){
+                    $(this).toggleClass('active');
+                    return false;
+                    });
+                  //...
+                  $(function() {
+                    var four = new DropDown( $('#four') );
+                    $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                    });
+                  });
+                </script>
+            <br><br>
             <!-- <div class="col-sm-4">
                    <section class="main">
                      <div class="wrapper-demo">
@@ -231,7 +238,7 @@
             <div class="col-sm-4"> -->
 
               <!-- demo -->
-              <div id="demo">
+              <!-- <div id="demo"> -->
 
                  <!-- panel -->
                  <!-- <div class="jplist-panel">
@@ -248,8 +255,8 @@
                    });
                    </script>
 
-                    <!-- bootstrap filter dropdown control -->
-                    <div
+                    <!- bootstrap filter dropdown control -->
+                    <!-- <div
                        class="dropdown pull-left"
                        data-control-type="boot-filter-drop-down"
                        data-control-name="category-filter"
@@ -285,15 +292,15 @@
                  </div> -->
 
                  <!-- HTML data -->
-                 <div class="list">
+                 <!-- <div class="list"> -->
 
                     <!-- item 1 -->
-                    <div class="list-item">
+                    <!-- <div class="list-item">
 
-                    </div>
+                    </div> -->
 
                     <!-- item 2 -->
-                    <div class="list-item">
+                    <!-- <div class="list-item">
 
                     </div>
 
@@ -303,17 +310,17 @@
 
               </div>
             </div>
-          </div>
+          </div> -->
          <!-- </header> -->
 <!-- Page/View Heading -->
 
-        <div class="row">
-            <div class="col-lg-12">
+        <!-- <div class="row">
+            <div class="col-lg-12"> -->
                 <!-- <h3 class="page-header">List of Potential Employers:
                     <small>Click More Info for details about each program</small>
                 </h3> -->
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
 
       <!-- Program One   Alex's stored program example -->
       <!-- <div class="row" >

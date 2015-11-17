@@ -1,12 +1,25 @@
 <!-- This is the display form for each program displayed on publicView from storage (mongo) -->
-<p>
-    {{employer}}
-    <br>
+<p style="z-index: -1">
   {{#each programs}}
-    {{this.school}}<br>
-    {{this.desc}}<br>
-    {{this.phone}}<br>
-    {{this.location}}<br>
-    {{this.moreInfo}}
+  <div class="list-group">
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">{{this.school}}</h4>
+      <p class="list-group-item-text">
+        {{this.desc}}<br>
+        {{this.phone}}<br>
+        {{this.location}}<br>
+        {{this.moreInfo}}
+      </p>
+    </a>
+  </div>
   {{/each}}
 </p>
+
+
+
+
+  <!-- {{this.school}}
+  {{this.desc}}<br>
+  {{this.phone}}<br>
+  {{this.location}}<br>
+  {{this.moreInfo}} -->

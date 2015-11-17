@@ -2,18 +2,10 @@
 
 var response = [
       {
-        school: "Bradford Tech Center"
-      },
-      {
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-      },
-      {
-        phone: "555-555-5555"
-      },
-      {
-        location: "Gainesville, FL"
-      },
-      {
+        school: "Bradford Tech Center",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        phone: "555-555-5555",
+        location: "Gainesville, FL",
         moreInfo: "More info button with #myModel here"
       }
     ];
@@ -22,9 +14,6 @@ $.handlebars({
     templatePath: 'templates'
 });
 
-// var source   = $("#test").html();
-// var template = Handlebars.compile(source);
-
 // now this will fetch <path/to/templates/content.hbs>
 $('#viewpage').render('viewpage', {
     employer: 'Hello',
@@ -32,7 +21,10 @@ $('#viewpage').render('viewpage', {
     programs: response
 });
 
-// Dropdowns on viewpage; publicView.html
+////////////////////////////////////////////
+// Dropdowns on viewpage; publicView.html //
+////////////////////////////////////////////
+
   function DropDown(el) {
     this.dd = el;
     this.placeholder = this.dd.children('span');
@@ -67,7 +59,37 @@ $('#viewpage').render('viewpage', {
 
   $(function() {
 
-    var dd = new DropDown( $('#dd') );
+    var dd = new DropDown( $('#one') );
+
+    $(document).click(function() {
+      // all dropdowns
+      $('.wrapper-dropdown-3').removeClass('active');
+    });
+
+  });
+  $(function() {
+
+    var dd = new DropDown( $('#two') );
+
+    $(document).click(function() {
+      // all dropdowns
+      $('.wrapper-dropdown-3').removeClass('active');
+    });
+
+  });
+  $(function() {
+
+    var dd = new DropDown( $('#three') );
+
+    $(document).click(function() {
+      // all dropdowns
+      $('.wrapper-dropdown-3').removeClass('active');
+    });
+
+  });
+  $(function() {
+
+    var dd = new DropDown( $('#four') );
 
     $(document).click(function() {
       // all dropdowns
