@@ -19,16 +19,19 @@ server.get("/", function(req, res) {
 });
 
 server.get("/submit", function(req, res) {
-  res.sendFile(__dirname+"/public/pages/forms.html");
+  res.sendFile("public/pages/forms.html", {root: __dirname});
 });
+
 
 server.get("/list", function(req, res) {
   res.sendFile(__dirname+"/public/pages/publicView.html");
+
 });
 
 server.get("/api/programs", function(req, res){
     Program.find({}, function(err, response){
         if(err)console.log(err);
+        console.log(response);
         res.json(response);
     });
 });
