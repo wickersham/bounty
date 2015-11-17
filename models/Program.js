@@ -8,14 +8,15 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
-    minCost:     {
-                    type: Number,
-                    min: 0,
+    county:      {
+                    type: String,
                     required: true
                  },
-    maxCost:     {
-                    type: Number,
-                    min: 0,
+    contactName: String,
+    email: String,
+    phoneNumber: String,
+    cost:        {
+                    type: String,
                     required: true
                  },
     certificate: String,
@@ -23,6 +24,7 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
+    timeOfDay: String,
     meals: String,
     affiliation: String,
     otherBenefits: String,
@@ -30,17 +32,17 @@ var programSchema = new Schema({
                     min: 0,
                     required: true
                  },
-    ageMax:      { 
+    ageMax:      {
                     type: Number,
                     min: 0,
                     required: true
-                 },   
+                 },
     pastSuccess: String,
     pastParticipants: String,
     wordOut: String,
     funded: String,
     impediments: String,
-    numParticipants: {
+    avgNumParticip: {
                         type: Number,
                         min: 0
                      },
@@ -53,8 +55,8 @@ var programSchema = new Schema({
                         type: String,
                         required: true
                     },
-    otherComments: String,
     partners: String,
+    servePop: String,
     scholarships: String,
     parentsInvolved: String,
     measureSuccess: String,
