@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-//user models
+//program model
 var programSchema = new Schema({
     programName: {
                     type: String,
