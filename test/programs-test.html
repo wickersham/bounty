@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="../public/js/form.js">
-    </script>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <script src='__dirname + "/public/js/jquery.min.js"'></script>
+   <script src='__dirname + "/public/js/form.js"'></script>
 </head>
 <body>
-    <script>
-        function test (then, expected){
-            results.total++;
-        //insert function here!
-            var result = posting(then);
-            if(result !== expected){
-                results.bad++;
-                console.log("Expected " + expected + ", but was " + result);
-            }
-        }
-
-        var results = {
-            total: 0,
-            bad: 0
-        }
-        
-    //needs more tests! and maybe some real ones
-        test("{}", "posts to db")
-        console.log("Of " + results.total + " tests, " + results.bad + " failed, " + (results.total - results.bad) + " passed.");
-    </script>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script>
+    qunit.test( "hello test", function(assert) {
+     assert.ok( 1 == "1", "Passed!" );
+    });
+  </script>
 </body>
 </html>
