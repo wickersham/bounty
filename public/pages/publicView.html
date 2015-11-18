@@ -10,6 +10,16 @@
     <meta name="author" content="">
 
     <title>Programs Offered</title>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- lodash helps our filter -->
+    <script src="../js/lodash.min"></script>
+
+    <!-- our filter -->
+    <script src="../js/filter.js"></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <!-- bootstrap theme -->
@@ -35,9 +45,30 @@
     <span class="blue">CareerSource</span><span class="dark-orange"> - </span><span class="green">Resource Guide</span>
 </h1>
  </header>
-    </div>
-     </div>
 
+
+ <div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bradford Tech Council</h4>
+        </div>
+        <div class="modal-body">
+          <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+               <h4>(352)555-5555</h4>
+                <p class="location">Location</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- end container -->
 
@@ -185,7 +216,15 @@
                     });
                   });
                 </script>
-  </div>
+      </div>
+      <!-- /container -->
+
+            <div class="search">
+              <button class="btn btn-success" id="search">Search</button>
+            </div>
+         </header>
+<!-- Page/View Heading -->
+
       <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -193,7 +232,7 @@
                     <small>Click a program for more details</small>
                 </h3>
             </div>
-        </div>
+         </div>
       </div>
 <!-- Handlebars viewport -->
       <div id="viewpage"></div>
@@ -230,11 +269,6 @@
     </section>
   </div>
 </footer>
-   <!-- jQuery -->
-   <!-- jplist core -->
-   <!-- <script src="../js/jplist-core.min.js"></script> -->
-   <!-- jplist bootstrap filter dropdown control -->
-   <!-- <script src="../js/jplist.boot-filter-dropdown.min.js"></script> -->
     <script src="../js/jquery.min.js"></script>
     <!-- HandlebarsJS -->
     <script src="../js/jquery-handlebars-1.1.4.min.js"></script>
@@ -243,6 +277,5 @@
     <!-- Handlebars template for programs list -->
     <script src="../js/template.js"></script>
     <script src = "../js/program.list.js"></script>
-
 </body>
 </html>

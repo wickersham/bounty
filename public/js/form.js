@@ -1,19 +1,6 @@
 $(document).ready(function(){
     console.log("working!");
-    
-//Pulling apart parts of submit form for testing purposes
-    function posting(dataObject){
-        $.post("/api/programs", dataObject, function(){
-            console.log("POSTING!!");
-        })
-            .done(function(){
-                console.log("success");
-            })
-//If this works it needs to inheret event.preventDefault()
-            .fail(function(){
-                console.log("fail");
-            });    
-    }
+    var dataObject = {},
 //Using .submit to handle the form and link the submit button to an action.
     $( "#programForm" ).submit(function( event ){
 //This will stop the submit funtion from refreshing page, possibly for missing form pieces.
@@ -54,7 +41,16 @@ $(document).ready(function(){
         formObject.inPerson = $( "#inPerson" ).val();
         console.log(formObject);
 
-        posting(formObject);
+        $.post("/api/programs", dataObject, function(){
+            console.log("POSTING!!");
+        })
+            .done(function(){
+                console.log("success");
+            })
+//If this works it needs to inheret event.preventDefault()
+            .fail(function(){
+                console.log("fail");
+            });
 
     });
 
