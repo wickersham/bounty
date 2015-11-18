@@ -85,7 +85,7 @@ var programSchema = new Schema({
                     type: Number,
                     min: 0
                   },
-    description: {
+    description:  {
                     type: String,
                     required: true
                   },
