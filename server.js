@@ -26,6 +26,8 @@ server.get("/list", function(req, res) {
   res.sendFile(__dirname+"/public/pages/publicView.html");
 });
 
+
+//server routes
 server.get("/api/programs", function(req, res){
     Program.find({}, function(err, response){
         if(err)console.log(err);
@@ -51,6 +53,9 @@ server.get("/api/programs/time/:timeline", function(req, res){
     res.send(programs);
   });
 });
+
+
+// template
 
 // server.get("/api/programs/", function(req, res){
 //   Program.find({}, function(err, programs) {

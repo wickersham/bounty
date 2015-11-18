@@ -3,10 +3,14 @@
 module.exports = {
     getPrograms: getPrograms,
     getProgramsById: getProgramsById,
+    getProgramsByTime: getProgramsByTime,
     // to be implimented
     // getProgramsByCounty: getProgramsByCounty,
     // getProgramsByCost: getProgramsByCost,
+<<<<<<< HEAD
+=======
     getProgramsByTime: getProgramsByTime,
+>>>>>>> a34789b52f340596fe9c8d106418c4f5dc2c2485
 };
 
 //Named functions for routes
@@ -31,15 +35,3 @@ var getProgramsByTime = function() {
             programs = response.data;
     });
 };
-
-// old mysql function kept for reference
-
-// function getProgramsByCounty(req, res){
-//   //programs/county/:county
-//     var county = req.body.county;
-//     connection.query("SELECT * FROM programs where county = '"+connection.escape(id)+"'", function(err, rows, fields){
-//         if(err){ console.error(err); return;}
-//         res.json(rows);
-//
-//     });
-// };
