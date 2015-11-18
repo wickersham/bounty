@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="">
-//The filename of the file to test goes here.
+    <script src="../public/js/form.js">
     </script>
 </head>
 <body>
@@ -12,7 +11,7 @@
         function test (then, expected){
             results.total++;
         //insert function here!
-            var result = search();
+            var result = posting(then);
             if(result !== expected){
                 results.bad++;
                 console.log("Expected " + expected + ", but was " + result);
@@ -25,7 +24,7 @@
         }
         
     //needs more tests! and maybe some real ones
-        test("location", "outputs programs of location")
+        test("{}", "posts to db")
         console.log("Of " + results.total + " tests, " + results.bad + " failed, " + (results.total - results.bad) + " passed.");
     </script>
 </body>

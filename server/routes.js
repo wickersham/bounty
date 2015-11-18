@@ -7,7 +7,7 @@ module.exports = {
     // to be implimented
     // getProgramsByCounty: getProgramsByCounty,
     // getProgramsByCost: getProgramsByCost,
-};
+  };
 
 //Named functions for routes
 
@@ -31,15 +31,3 @@ var getProgramsByTime = function() {
             programs = response.data;
     });
 };
-
-// old mysql function kept for reference/fun
-
-// function getProgramsByCounty(req, res){
-//   //programs/county/:county
-//     var county = req.body.county;
-//     connection.query("SELECT * FROM programs where county = '"+connection.escape(id)+"'", function(err, rows, fields){
-//         if(err){ console.error(err); return;}
-//         res.json(rows);
-//
-//     });
-// };

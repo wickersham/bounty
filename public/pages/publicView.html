@@ -12,9 +12,19 @@
     <title>Programs Offered</title>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
 
-    <!-- Custom CSS -->
+    <!-- Custom CSSs -->
     <link href="../css/programs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+    <!-- Scripts for dropdowns -->
+      <noscript>
+        <link rel="stylesheet" type="text/css" href="css/noJS.css" />
+      </noscript>
 
 </head>
 <body>
@@ -40,7 +50,6 @@
         </div>
         <div class="modal-body">
           <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-               <p>  </p>
                <h4>(352)555-5555</h4>
                 <p class="location">Location</p>
 </div>
@@ -53,13 +62,13 @@
   </div>
 
 </div>
+<!-- end container -->
+
     <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
     <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Brand and toggle get grouped for better mobile display -->
      <div class="navbar-header">
-
        <!-- Trying to put CSNCFL image in header -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -71,122 +80,184 @@
 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse head" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
                    <li>
-                       <a href="#">Home</a>
+                       <a href="">Home</a>
                    </li>
                     <li>
-                        <a href="#copyright">Contact</a>
+                        <a href="">Contact</a>
                     </li>
 
                 </ul>
-            </div>
         </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="z-index: 1">
+        <!-- Dropdown one -->
+        <div class="row" style="padding: 30px;">
+            <div class="col-sm-3">
+              <div id="one" class="wrapper-dropdown-3" tabindex="1">
+              	<span>Location:</span>
+              	<ul class="dropdown">
+              		<li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+              		<li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
+              		<li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+              	</ul>
+              </div>
+            </div>
+            <!-- Script for Dropdown one -->
+            <script type="text/jquery">
+              obj.dd.on('click', function(event){
+                $(this).toggleClass('active');
+                return false;
+                });
+              //...
+              $(function() {
+                var one = new DropDown( $('#dd') );
+                $(document).click(function() {
+                // all dropdowns
+                $('.wrapper-dropdown-1').removeClass('active');
+                });
+              });
+            </script>
+              <!-- Dropdown two -->
+              <div class="col-sm-3">
+                <div id="two" class="wrapper-dropdown-3" tabindex="1">
+                  <span>Cost:</span>
+                  <ul class="dropdown">
+                    <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                    <li><a href="#"><i class="icon-truck icon-large"></i>less than $50</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>more than $50</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Script for Dropdown two -->
+              <script type="text/jquery">
+                obj.two.on('click', function(event){
+                  $(this).toggleClass('active');
+                  return false;
+                  });
+                //...
+                $(function() {
+                  var two = new DropDown( $('#two') );
+                  $(document).click(function() {
+                  // all dropdowns
+                  $('.wrapper-dropdown-1').removeClass('active');
+                  });
+                });
+              </script>
+              <!-- Dropdown three -->
+                <div class="col-sm-3">
+                  <div id="three" class="wrapper-dropdown-3" tabindex="1">
+                    <span>Time Length:</span>
+                    <ul class="dropdown">
+                      <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                      <li><a href="#"><i class="icon-truck icon-large"></i>less than 1 hour</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>more than 1 hour</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Script for Dropdown three -->
+                <script type="text/jquery">
+                  obj.three.on('click', function(event){
+                    $(this).toggleClass('active');
+                    return false;
+                    });
+                  //...
+                  $(function() {
+                    var three = new DropDown( $('#three') );
+                    $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                    });
+                  });
+                </script>
+                <!-- Dropdown four -->
+                  <div class="col-sm-3">
+                    <div id="four" class="wrapper-dropdown-3" tabindex="1">
+                      <span>Age Range:</span>
+                      <ul class="dropdown">
+                        <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+                        <li><a href="#"><i class="icon-truck icon-large"></i>foo</a></li>
+                        <li><a href="#"><i class="icon-plane icon-large"></i>bar</a></li>
+                      </ul>
+                    </div>
+                    <br>
+                    <div class="search" style="text-align:center">
+                            <button class="btn btn-success" id="search">Search</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Script for Dropdown four -->
+                <script type="text/jquery">
+                  obj.four.on('click', function(event){
+                    $(this).toggleClass('active');
+                    return false;
+                    });
+                  //...
+                  $(function() {
+                    var four = new DropDown( $('#four') );
+                    $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-1').removeClass('active');
+                    });
+                  });
+                </script>
+      </div>
+      <!-- /container -->
+    <!-- <div class="container"> -->
 
 <!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
-        <header id="selection-header">
+        <!-- <header id="selection-header">
             <div class="pull-left">
-            <h5>Location:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">Alachua</option>
-                      <option value="three">Bradford</option>
+            <h5>County:</h5>
+            <select class="select" id="county">
+                      <option value="none">none</option>
+                      <option value="Alachua">Alachua</option>
+                      <option value="Bradford">Bradford</option>
             </select>
             </div>
             <div class="pull-left">
                <h5>Cost:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">$1-$50</option>
-                      <option value="three">more than $50</option>
+               <select class="select" id="cost">
+                      <option value="none">none</option>
+                      <option value="1-50">$1-$50</option>
+                      <option value="50+">more than $50</option>
             </select>
             </div>
             <div class="pull-left">
                <h5>Time length:</h5>
-               <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 1 hour</option>
-                      <option value="three">more than 1 hour</option>
+               <select class="select" id="duration">
+                      <option value="none">none</option>
+                      <option value="less than 1 hour">less than 1 hour</option>
+                      <option value="more than 1 hour">more than 1 hour</option>
             </select>
             </div>
             <div class="pull-left">
             <h5>Age Range:</h5>
-            <select class="select">
-                      <option value="one">none</option>
-                      <option value="two">less than 16</option>
-                      <option value="three">more than 16</option>
+            <select class="select" id="age">
+                      <option value="none">none</option>
+                      <option value="less than 16">less than 16</option>
+                      <option value="more than 16">more than 16</option>
             </select>
-            </div>
-    <div class="search">        
+            </div> -->
+    <!-- <div class="search">
             <button class="btn btn-success" id="search">Search</button>
-    </div>     
-         </header>
+    </div>
+         </header> -->
 <!-- Page/View Heading -->
+      <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header">List of Potential Employers:
-                    <small>Click More Info for details about each program</small>
+                    <small>Click a program for more details</small>
                 </h3>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Program One -->
-        <div class="row" >
-            <div class="col-md-7 box">
-               <p>Bradford Tech Center</p>
-               <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-               <p></p>
-               <h4>(352)555-5555</h4>
-<!--Why is this displaying after the button?-->
-                <p class="location">Location</p>
-<!--Moved button inside box, might need some push right magic-->
-                <div class="col-md-5">
-                    <a class="btn btn-success" href="" data-toggle="modal" data-target="#myModal">More info <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-
-
-</div>
-        </div>
-        <!-- /.row -->
-        <hr>
-  </div>
-    <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-<!--Needs function to generate dynamically with data set size -->
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-
+<!-- Handlebars viewport -->
+      <div id="viewpage"></div>
+  <!-- /container -->
         <hr>
 
         <!-- Footer -->
@@ -220,13 +291,18 @@
   </div>
 </footer>
    <!-- jQuery -->
+   <!-- jplist core -->
+   <!-- <script src="../js/jplist-core.min.js"></script> -->
+   <!-- jplist bootstrap filter dropdown control -->
+   <!-- <script src="../js/jplist.boot-filter-dropdown.min.js"></script> -->
     <script src="../js/jquery.min.js"></script>
-
+    <!-- HandlebarsJS -->
+    <script src="../js/jquery-handlebars-1.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- Handlebars template for programs list -->
+    <script src="../js/template.js"></script>
     <script src = "../js/program.list.js"></script>
-    
-
 
 </body>
 </html>
