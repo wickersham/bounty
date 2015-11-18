@@ -1,6 +1,6 @@
 $(document).ready(function(){
     console.log("working!");
-    
+    var dataObject = {},
 //Pulling apart parts of submit form for testing purposes
     function posting(dataObject){
         $.post("/api/programs", dataObject, function(){
@@ -12,7 +12,7 @@ $(document).ready(function(){
 //If this works it needs to inheret event.preventDefault()
             .fail(function(){
                 console.log("fail");
-            });    
+            });
     }
 //Using .submit to handle the form and link the submit button to an action.
     $( "#programForm" ).submit(function( event ){
