@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         $.ajax(options)
          .done(function(data){
-            console.log(data[0]);
+            console.log(data);
             programList = data;
         })
          .error(function(err){
