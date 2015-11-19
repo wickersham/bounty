@@ -18,12 +18,6 @@
     <!-- Custom Fonts -->
     <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -34,17 +28,19 @@
     <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
     <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-         <!-- Trying to put CSNCFL image in header -->
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-          </button>
-         <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
-      </div>
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+  <!--  Adding logo to the navbar -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+    </button>
+       <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
+
+    </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav pull-right">
@@ -60,13 +56,205 @@
     </div>
 </nav>
 
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Information</a>
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Please Tell Us About Your Program:</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input class="form-control" placeholder="Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Program Name</label>
+                                            <input class="form-control" placeholder="Program">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Cost:</label>
+                                            <select class="form-control" placeholder="Select one">
+                                                <option>Free</option>
+                                                <option>Less than $1,000</option>
+                                                <option>$1,001-$2,000</option>
+                                                <option>More than $2,000</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                          <label>Meals Included?</label>
+                                          <select class="form-control">
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group">
+                                          <label>College/University affiliation?</label>
+                                          <select class="form-control">
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Program Description</label>
+                                            <textarea class="form-control" rows="3" placeholder="Type here"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Participants come from where?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Do you work with other programs?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Current challenges to program's success?</label>
+                                            <textarea class="form-control" rows="3" placeholder="Type here"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Number of participants per year:</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Program website</label>
+                                            <input class="form-control" placeholder="website">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Scholarships?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>How is success measured?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>In-person, online-only or combination?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Time of day offered?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Comparable local programs that you know of?</label>
+                                            <input class="form-control" placeholder="Type here">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                  <form role="form">
+                                      <div class="form-group">
+                                          <label>Phone</label>
+                                          <input class="form-control" placeholder="Phone">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Email</label>
+                                          <input class="form-control" placeholder="Email">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Program timeline</label>
+                                          <input class="form-control" placeholder="How many days/hours to complete?">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Ages</label>
+                                        <select class="form-control">
+                                          <option>18 and under</option>
+                                          <option>18 and over</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Data tracking past success of program?</label>
+                                          <input class="form-control" placeholder="Elaborate">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Any additional benefits?</label>
+                                          <textarea class="form-control" rows="3" placeholder="Type here"></textarea>
+                                      </div>
+                                      <div class="form-group">
+                                          <label>How do people find out about this program?</label>
+                                          <input class="form-control" placeholder="Type here">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>How is program funded?</label>
+                                          <input class="form-control" placeholder="Type here">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Program description</label>
+                                          <textarea class="form-control" rows="3" placeholder="Type here"></textarea>
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Program phone number</label>
+                                          <input class="form-control" placeholder="Phone">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Program location</label>
+                                          <input class="form-control" placeholder="Location">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Program partners?</label>
+                                          <input class="form-control" placeholder="Type here">
+                                      </div>
+                                      <div class="form-group">
+                                          <label>How are parents involved?</label>
+                                          <input class="form-control" placeholder="Type here">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Funded by CareerSource NCFL?</label>
+                                        <select class="form-control">
+                                          <option>No</option>
+                                          <option>Yes</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label>Serve a targeted population?</label>
+                                          <input class="form-control" placeholder="Type here">
+                                      </div>
+                                        <br>
+                                      <button type="submit" class="btn btn-success pull-right">Submit Button</button>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+      </div>
+    </div>
 
 <!--DB values that don't currently have questions: certificate, pastParticipants, impediments, otherComments, bringDayOne-->
 
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Please Tell Us About Your Program:</h1>
+            <h2 class="page-header">Please Tell Us About Your Program:</h2>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -74,185 +262,166 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-
-<!--Inserted form tag to give jQuery something to submit, home this works.-->
                 <form id="programForm">
-                  <div class="panel-body">
-                      <div class="row">
-                          <div class="col-lg-6">
-  <!--Not currently represented in the db-->
-                                  <div class="form-group">
-                                      <label>Name</label>
-                                      <input class="form-control" placeholder="Name">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Program Name</label>
-                                      <input class="form-control" placeholder="Program" id="programName">
-                                  </div>
-  <!--Need to change this input value to match db, or change db to match form-->
-                                  <div class="form-group">
-                                      <label>Cost:</label>
-                                      <select class="form-control" placeholder="Select one">
-                                          <option>Free</option>
-                                          <option>Less than $1,000</option>
-                                          <option>$1,001-$2,000</option>
-                                          <option>More than $2,000</option>
-                                      </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label>Meals Included?</label>
-                                    <select class="form-control" id="meals">
-                                      <option>Yes</option>
-                                      <option>No</option>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input class="form-control" placeholder="Name" id="contactName">
+                                </div>
+                                <div class="form-group">
+                                    <label>Program Name</label>
+                                    <input class="form-control" placeholder="Program" id="programName">
+                                </div>
+                                <div class="form-group">
+                                  <label>Location</label>
+                                  <input class="form-control" placeholder="Type here" id="location">
+                                </div>
+                                <div class="form-group">
+                                    <label>Cost:</label>
+                                    <select class="form-control" placeholder="Select one" id="cost">
+                                        <option>Select One</option>
+                                        <option>Free</option>
+                                        <option>$0 - $500</option>
+                                        <option>$500 - $1,000</option>
+                                        <option>More than $1,000</option>
                                     </select>
-                                  </div>
-  <!--Is this a yes/no or should there be space to declare which college is affiliate-->
-                                  <div class="form-group">
-                                    <label>College/University affiliation?</label>
-                                    <select class="form-control" id="affiliation">
-                                      <option>Yes</option>
-                                      <option>No</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Program Description</label>
-                                      <textarea class="form-control" rows="3" placeholder="Type here" id="description"></textarea>
-                                  </div>
-  <!--Question unclear-->
-                                  <div class="form-group">
-                                      <label>Participants come from where?</label>
-                                      <input class="form-control" placeholder="Type here">
-                                  </div>
-  <!--Question not in db form?-->
-                                  <div class="form-group">
-                                      <label>Do you work with other programs?</label>
-                                      <input class="form-control" placeholder="Type here">
-                                  </div>
-  <!--Not in db?-->
-                                  <div class="form-group">
-                                      <label>Current challenges to program's success?</label>
-                                      <textarea class="form-control" rows="3" placeholder="Type here"></textarea>
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Number of participants per year:</label>
-                                      <input class="form-control" placeholder="Type here" id="numParticipants">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Program website</label>
-                                      <input class="form-control" placeholder="website" id="programUrl">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Scholarships?</label>
-                                      <input class="form-control" placeholder="Type here" id="scholarships">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>How is success measured?</label>
-                                      <input class="form-control" placeholder="Type here" id="measureSuccess">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>In-person, online-only or combination?</label>
-                                      <input class="form-control" placeholder="Type here" id="inPerson">
-                                  </div>
-                                  <div class="form-group">
-                                      <label>Time of day offered?</label>
-                                      <input class="form-control" placeholder="Type here" id="timeline">
-                                  </div>
-  <!--Not in db?-->
-                                  <div class="form-group">
-                                      <label>Comparable local programs that you know of?</label>
-                                      <input class="form-control" placeholder="Type here" >
-                                  </div>
-
-                          </div>
-  <!--This class could use some reworking for smaller screen sizes-->
-                          <!-- /.col-lg-6 (nested) -->
-                          <div class="col-lg-6">
-  <!--Not in db?-->
-                                <div class="form-group">
-                                    <label>Phone</label>
-                                    <input class="form-control" placeholder="Phone">
-                                </div>
-  <!--Not in db?-->
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input class="form-control" placeholder="Email">
-                                </div>
-  <!--How does thie differ from "time of day offered"? Also, this question's wording confuses me-->
-                                <div class="form-group">
-                                    <label>Program timeline</label>
-                                    <input class="form-control" placeholder="How many days/hours to complete?">
-                                </div>
-  <!--Needs ageMin and ageMax to match db, and possibly a all age category?-->
-                                <div class="form-group">
-                                  <label>Ages</label>
-                                  <select class="form-control">
-                                    <option>18 and under</option>
-                                    <option>18 and over</option>
-                                  </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Data tracking past success of program?</label>
-                                    <input class="form-control" placeholder="Elaborate" id="pastSuccess">
+                                  <label>Are meals included?</label>
+                                  <input class="form-control" placeholder="Yes or No" id="meals">
                                 </div>
                                 <div class="form-group">
-                                    <label>Any additional benefits?</label>
-                                    <textarea class="form-control" rows="3" placeholder="Type here" id="otherBenefits"></textarea>
+                                  <label>Minimum Age</label>
+                                  <input class="form-control" placeholder="Type Here" id="ageMin">
                                 </div>
                                 <div class="form-group">
-                                    <label>How do people find out about this program?</label>
-                                    <input class="form-control" placeholder="Type here" id="wordOut">
+                                  <label>Is program affiliated with a college/university?</label>
+                                  <input class="form-control" placeholder="Type here" id="affiliation">
                                 </div>
                                 <div class="form-group">
-                                    <label>How is program funded?</label>
-                                    <input class="form-control" placeholder="Type here" id="funded">
+                                    <label>Describe program</label>
+                                    <textarea class="form-control" rows="3" placeholder="Type here" id="description"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Program location</label>
-                                    <input class="form-control" placeholder="Location" id="location">
+                                    <label>Where do participants come from?</label>
+                                    <input class="form-control" placeholder="Type here" id="pastParticipants">
                                 </div>
                                 <div class="form-group">
-                                    <label>Program partners?</label>
-                                    <input class="form-control" placeholder="Type here" id="partners">
-                                </div>
-  <!--Maybe just "are parents involved?" The how implies to me that all programs must have parent involvement-->
-                                <div class="form-group">
-                                    <label>How are parents involved?</label>
-                                    <input class="form-control" placeholder="Type here" id="parentsInvolved">
+                                    <label>Current challenges to program's success?</label>
+                                    <textarea class="form-control" rows="3" placeholder="Type here" id="impediments"></textarea>
                                 </div>
                                 <div class="form-group">
-                                  <label>Funded by CareerSource NCFL?</label>
-                                  <select class="form-control" id="NCFLFunded">
-                                    <option>No</option>
-                                    <option>Yes</option>
-                                  </select>
+                                    <label>Average number of participants:</label>
+                                    <input class="form-control" placeholder="Type here" id="avgNumParticip">
                                 </div>
-  <!--Not in db?-->
                                 <div class="form-group">
-                                    <label>Serve a targeted population?</label>
-                                    <input class="form-control" placeholder="Type here">
+                                    <label>Program website</label>
+                                    <input class="form-control" placeholder="Type here" id="programUrl">
                                 </div>
-                                  <br>
-                                <button type="submit" class="btn btn-success pull-right">Submit Button</button>
-                                <!-- <button type="reset" class="btn btn-default">Reset Button</button> -->
-                          <!-- /.col-lg-6 (nested) -->
-                      </div>
-                      <!-- /.row (nested) -->
-                  </div>
-                  <!-- /.panel-body -->
-              </div>
+                                <div class="form-group">
+                                    <label>Scholarships available?</label>
+                                    <input class="form-control" placeholder="Type here" id="scholarships">
+                                </div>
+                                <div class="form-group">
+                                    <label>How is success measured?</label>
+                                    <input class="form-control" placeholder="Type here" id="measureSuccess">
+                                </div>
+                                <div>
+                                  <label>What does participant bring with on day one?</label>
+                                  <input class="form-control" placeholder="Type here" id="bringDayOne">
+                                </div>
+                                <br>
+                                <button type="submit" class="btn-large btn-success">Submit Button</button>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <div class="col-lg-6">
+                              <div class="form-group">
+                                  <label>Phone</label>
+                                  <input class="form-control" placeholder="Phone" id="phoneNumber">
+                              </div>
+                              <div class="form-group">
+                                  <label>Email</label>
+                                  <input class="form-control" placeholder="Email" id="email">
+                              </div>
+                              <div class="form-group">
+                                <label>County</label>
+                                <input class="form-control" placeholder="Alachua or Bradford" id="county">
+                              </div>
+                              <div class="form-group">
+                                  <label>Program timeline</label>
+                                  <input class="form-control" placeholder="How many days/hours to complete?" id="timeline">
+                              </div>
+                              <div class="form-group">
+                                  <label>Does program offer a certificate upon completion?</label>
+                                  <input class="form-control" placeholder="Type here" id="certificate">
+                              </div>
+                              <div class="form-group">
+                                <label>Maximum Age</label>
+                                <input class="form-control" placeholder="Type here" id="ageMax">
+                              </div>
+                              <div class="form-group">
+                                  <label>Data tracking past success of program?</label>
+                                  <input class="form-control" placeholder="Type here" id="pastSuccess">
+                              </div>
+                              <div class="form-group">
+                                  <label>How do people find out about this program?</label>
+                                  <input class="form-control" placeholder="Type here" id="wordOut">
+                              </div>
+                              <div class="form-group">
+                                  <label>How is program funded?</label>
+                                  <input class="form-control" placeholder="Type here" id="funded">
+                              </div>
+                              <div class="form-group">
+                                  <label>Are there any partners to the program?</label>
+                                  <input class="form-control" placeholder="Type here" id="partners">
+                              </div>
+                              <div class="form-group">
+                                  <label>Are parents involved?</label>
+                                  <input class="form-control" placeholder="Type here" id="parentsInvolved">
+                              </div>
+                              <div class="form-group">
+                                <label>Funded by CareerSource NCFL?</label>
+                                <input class="form-control" placeholder="Yes or No" id="NCFLFunded">
+                              </div>
+                              <div class="form-group">
+                                  <label>Does program serve a targeted population?</label>
+                                  <input class="form-control" placeholder="Type here" id="servePop">
+                              </div>
+                              <div class="form-group">
+                                  <label>Is program offered in-person or online?</label>
+                                  <input class="form-control" placeholder="Type here" id="inPerson">
+                              </div>
+                              <div class="form-group">
+                                  <label>Time of day offered?</label>
+                                  <input class="form-control" placeholder="Type here" id="timeOfDay">
+                              </div>
+                              <div class="form-group">
+                                  <label>Any additional benefits?</label>
+                                  <textarea class="form-control" rows="3" placeholder="Type here" id="otherBenefits"></textarea>
+                              </div>
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
             <!-- /.panel -->
             </form>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
-  </div>
+</div>
 <!-- /#page-wrapper -->
 </div>
+    </div>
     <!-- /#wrapper -->
 <!-- Footer -->
 <footer id="footer" class="grid-block uk-float-left">
   <div class="wrapper grid-block">
+
      <section id="copyright" class="grid-block uk-float-right">
           <div class="module   deepest">
             <div>
@@ -275,12 +444,11 @@
 </footer>
    <!-- jQuery -->
     <script src="../js/jquery.min.js"></script>
-
+     <!-- Bootstrap Core JavaScript -->
+     <script src="../js/bootstrap.min.js"></script>
+     <!-- form submission -->
+     <script src="../js/form.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
-    <!-- form submission -->
-    <script src="../js/form.js"></script>
 </body>
-
 </html>

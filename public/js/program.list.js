@@ -1,4 +1,11 @@
+
+
+
 $(document).ready(function(){
+  $.handlebars({
+      templatePath: 'templates'
+  });
+
     var programList = [];
     //These are references to the select drop down boxes for search functionality
     var $cost = $("#cost");
@@ -24,8 +31,13 @@ $(document).ready(function(){
 
         $.ajax(options)
          .done(function(data){
-            console.log(data);
-            programList = data;
+
+
+            // now this will fetch <path/to/templates/content.hbs>
+            $('#viewpage').render('viewpage', {
+
+                programs: data
+            });
         })
          .error(function(err){
             console.log(err);

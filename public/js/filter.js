@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
   These are utility functions that are going to be used to filter frontend data.
 */
@@ -51,3 +52,5 @@ function filterByTimeOfDay(programs, timeOfDay){
 //   });
 //   return programsByAge;
 // }
+=======
+>>>>>>> bce7bdbf3db4a9ae6d6995f0f36c0111f3288202

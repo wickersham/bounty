@@ -1,6 +1,5 @@
 $(document).ready(function(){
     console.log("working!");
-    var dataObject = {},
 //Using .submit to handle the form and link the submit button to an action.
     $( "#programForm" ).submit(function( event ){
 //This will stop the submit funtion from refreshing page, possibly for missing form pieces.
@@ -41,7 +40,7 @@ $(document).ready(function(){
         formObject.inPerson = $( "#inPerson" ).val();
         console.log(formObject);
 
-        $.post("/api/programs", dataObject, function(){
+        $.post("/api/programs", formObject, function(){
             console.log("POSTING!!");
         })
             .done(function(){
