@@ -1,9 +1,15 @@
+
+
+
 $(document).ready(function(){
+  $.handlebars({
+      templatePath: 'templates'
+  });
+
     var programList = [];
-    var $test = $("#test");
     //These are references to the select drop down boxes for search functionality
     var $cost = $("#cost");
-    var $county = $("#county");
+    var $location = $("#location");
     var $duration = $("#duration");
     var $age = $("#age");
 
@@ -12,10 +18,11 @@ $(document).ready(function(){
     //This function will obtain the programs collection from the server
     function getPrograms(){
         console.log("before");
-        console.log($cost.val());
-        console.log($county.val());
-        console.log($duration.val());
-        console.log($age.val());
+      var $cost = $("#cost span")[0].innerText;
+      var $location = $("#location span")[0].innerText;
+      var $duration = $("#duration span")[0].innerText;
+      var $age = $("#age span")[0].innerText;
+
         var options = {
             method: "GET",
             url: "/api/programs",
@@ -25,8 +32,11 @@ $(document).ready(function(){
         $.ajax(options)
          .done(function(data){
             console.log(data[0]);
-            $test.html(data[0].programName);
-            programList = data;
+            // now this will fetch <path/to/templates/content.hbs>
+            $('#viewpage').render('viewpage', {
+
+                programs: data
+            });
         })
          .error(function(err){
             console.log(err);

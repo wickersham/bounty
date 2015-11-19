@@ -23,12 +23,12 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <!-- bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
 
     <!-- Custom CSSs -->
     <link href="../css/programs.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
     <!-- Scripts for dropdowns -->
@@ -73,11 +73,13 @@
 <!-- end container -->
 
     <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
-    <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-     <div class="navbar-header">
-       <!-- Trying to put CSNCFL image in header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container color">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+
+           <!-- Trying to put CSNCFL image in header -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -86,17 +88,19 @@
         </button>
            <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
 
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+        </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
                    <li>
-                       <a href="">Home</a>
+                       <a href="/" class="">Home</a>
                    </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#copyright" class="">Contact</a>
                     </li>
 
                 </ul>
+            </div>
         </div>
     </nav>
 
@@ -105,7 +109,7 @@
         <!-- Dropdown one -->
         <div class="row" style="padding: 30px;">
             <div class="col-sm-3">
-              <div id="one" class="wrapper-dropdown-3" tabindex="1">
+              <div id="location" class="wrapper-dropdown-3" tabindex="1">
               	<span>Location:</span>
               	<ul class="dropdown">
               		<li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
@@ -131,7 +135,7 @@
             </script>
               <!-- Dropdown two -->
               <div class="col-sm-3">
-                <div id="two" class="wrapper-dropdown-3" tabindex="1">
+                <div id="cost" class="wrapper-dropdown-3" tabindex="1">
                   <span>Cost:</span>
                   <ul class="dropdown">
                     <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
@@ -157,7 +161,7 @@
               </script>
               <!-- Dropdown three -->
                 <div class="col-sm-3">
-                  <div id="three" class="wrapper-dropdown-3" tabindex="1">
+                  <div id="duration" class="wrapper-dropdown-3" tabindex="1">
                     <span>Time Length:</span>
                     <ul class="dropdown">
                       <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
@@ -183,7 +187,7 @@
                 </script>
                 <!-- Dropdown four -->
                   <div class="col-sm-3">
-                    <div id="four" class="wrapper-dropdown-3" tabindex="1">
+                    <div id="age" class="wrapper-dropdown-3" tabindex="1">
                       <span>Age Range:</span>
                       <ul class="dropdown">
                         <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
@@ -214,17 +218,13 @@
                 </script>
       </div>
       <!-- /container -->
-    <!-- <div class="container"> -->
 
-<!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
-        
-                </select>
-            </div>
             <div class="search">
               <button class="btn btn-success" id="search">Search</button>
             </div>
          </header>
 <!-- Page/View Heading -->
+
       <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -232,7 +232,8 @@
                     <small>Click a program for more details</small>
                 </h3>
             </div>
-        </div>
+         </div>
+      </div>
 <!-- Handlebars viewport -->
       <div id="viewpage"></div>
   <!-- /container -->
