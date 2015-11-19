@@ -23,40 +23,40 @@
 
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
     <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
-    <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
+        <div class="container">
 
-  <!-- Brand and toggle get grouped for better mobile display -->
-     <div class="navbar-header">
-  <!--  Adding logo to the navbar -->
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-    </button>
-       <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
+      <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+      <!--  Adding logo to the navbar -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+        </button>
+           <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
 
-    </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav pull-right">
-               <li>
-                   <a href="/" class="">Home</a>
-               </li>
-                <li>
-                    <a href="#copyright" class="">Contact</a>
-                </li>
-
-            </ul>
         </div>
-    </div>
-</nav>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav pull-right">
+                   <li>
+                       <a href="/" class="">Home</a>
+                   </li>
+                    <li>
+                        <a href="#copyright" class="">Contact</a>
+                    </li>
 
-<div class="container">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <h2 class="page-header">Please Tell Us About Your Program:</h2>
@@ -70,11 +70,21 @@
                 <form id="programForm">
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-6">
+                      <h4>Tell us about yourself</h4>
+                        <!-- <div class="col-lg-6"> -->
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input class="form-control" placeholder="Name" id="contactName">
                                 </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input class="form-control" placeholder="Phone" id="phoneNumber">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" placeholder="Email" id="email">
+                                </div>
+                      <h4>Program information:</h4>
                                 <div class="form-group">
                                     <label>Program Name</label>
                                     <input class="form-control" placeholder="Program" id="programName">
@@ -84,7 +94,16 @@
                                   <input class="form-control" placeholder="Type here" id="location">
                                 </div>
                                 <div class="form-group">
-                                    <label>Cost:</label>
+                                  <label>County</label>
+                                  <input class="form-control" placeholder="Alachua or Bradford" id="county">
+                                </div>
+                                <div class="form-group">
+                                    <label>Program website</label>
+                                    <input class="form-control" placeholder="Type here" id="programUrl">
+                                </div>
+                        <h4>Program details:</h4>
+                                <div class="form-group">
+                                    <label>Cost</label>
                                     <select class="form-control" placeholder="Select one" id="cost">
                                         <option>Select One</option>
                                         <option>Free</option>
@@ -98,32 +117,28 @@
                                   <input class="form-control" placeholder="Yes or No" id="meals">
                                 </div>
                                 <div class="form-group">
-                                  <label>Minimum Age</label>
-                                  <input class="form-control" placeholder="Type Here" id="ageMin">
+                                    <label>Program timeline</label>
+                                    <input class="form-control" placeholder="How many days/hours to complete?" id="timeline">
                                 </div>
                                 <div class="form-group">
-                                  <label>Is program affiliated with a college/university?</label>
-                                  <input class="form-control" placeholder="Type here" id="affiliation">
+                                    <label>Does program offer a certificate upon completion?</label>
+                                    <input class="form-control" placeholder="Type here" id="certificate">
                                 </div>
                                 <div class="form-group">
-                                    <label>Describe program</label>
-                                    <textarea class="form-control" rows="3" placeholder="Type here" id="description"></textarea>
+                                    <label>Data tracking past success of program?</label>
+                                    <input class="form-control" placeholder="Type here" id="pastSuccess">
                                 </div>
                                 <div class="form-group">
-                                    <label>Where do participants come from?</label>
-                                    <input class="form-control" placeholder="Type here" id="pastParticipants">
+                                    <label>How do people find out about this program?</label>
+                                    <input class="form-control" placeholder="Type here" id="wordOut">
                                 </div>
                                 <div class="form-group">
-                                    <label>Current challenges to program's success?</label>
-                                    <textarea class="form-control" rows="3" placeholder="Type here" id="impediments"></textarea>
+                                    <label>How is program funded?</label>
+                                    <input class="form-control" placeholder="Type here" id="funded">
                                 </div>
                                 <div class="form-group">
-                                    <label>Average number of participants:</label>
-                                    <input class="form-control" placeholder="Type here" id="avgNumParticip">
-                                </div>
-                                <div class="form-group">
-                                    <label>Program website</label>
-                                    <input class="form-control" placeholder="Type here" id="programUrl">
+                                    <label>Are there any partners to the program?</label>
+                                    <input class="form-control" placeholder="Type here" id="partners">
                                 </div>
                                 <div class="form-group">
                                     <label>Scholarships available?</label>
@@ -133,81 +148,63 @@
                                     <label>How is success measured?</label>
                                     <input class="form-control" placeholder="Type here" id="measureSuccess">
                                 </div>
+                                <div class="form-group">
+                                  <label>Funded by CareerSource NCFL?</label>
+                                  <input class="form-control" placeholder="Yes or No" id="NCFLFunded">
+                                </div>
+                                <div class="form-group">
+                                    <label>Does program serve a targeted population?</label>
+                                    <input class="form-control" placeholder="Type here" id="servePop">
+                                </div>
+                                <div class="form-group">
+                                    <label>Is program offered in-person or online?</label>
+                                    <input class="form-control" placeholder="Type here" id="inPerson">
+                                </div>
+                                <div class="form-group">
+                                    <label>Time of day offered?</label>
+                                    <input class="form-control" placeholder="Type here" id="timeOfDay">
+                                </div>
+                                <div class="form-group">
+                                  <label>Is program affiliated with a college/university?</label>
+                                  <input class="form-control" placeholder="Type here" id="affiliation">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description of program</label>
+                                    <textarea class="form-control" rows="3" placeholder="Type here" id="description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Any additional benefits for participant?</label>
+                                    <textarea class="form-control" rows="3" placeholder="Type here" id="otherBenefits"></textarea>
+                                </div>
+                          <h4>Participant information:</h4>
+                                <div class="form-group">
+                                  <label>Minimum Age</label>
+                                  <input class="form-control" placeholder="Type Here" id="ageMin">
+                                </div>
+                                <div class="form-group">
+                                  <label>Maximum Age</label>
+                                  <input class="form-control" placeholder="Type here" id="ageMax">
+                                </div>
+                                <div class="form-group">
+                                    <label>Where do participants come from?</label>
+                                    <input class="form-control" placeholder="Type here" id="pastParticipants">
+                                </div>
+                                <div class="form-group">
+                                    <label>Average number of participants:</label>
+                                    <input class="form-control" placeholder="Type here" id="avgNumParticip">
+                                </div>
+                                <div class="form-group">
+                                    <label>Are parents involved?</label>
+                                    <input class="form-control" placeholder="Type here" id="parentsInvolved">
+                                </div>
                                 <div>
                                   <label>What does participant bring with on day one?</label>
                                   <input class="form-control" placeholder="Type here" id="bringDayOne">
                                 </div>
-                                <br>
-                                <button type="submit" class="btn-large btn-success">Submit Button</button>
-                        </div>
+                              <br>
+                              <button type="submit" class="btn-large btn-success">Submit Button</button>
                         <!-- /.col-lg-6 (nested) -->
-                        <div class="col-lg-6">
-                              <div class="form-group">
-                                  <label>Phone</label>
-                                  <input class="form-control" placeholder="Phone" id="phoneNumber">
-                              </div>
-                              <div class="form-group">
-                                  <label>Email</label>
-                                  <input class="form-control" placeholder="Email" id="email">
-                              </div>
-                              <div class="form-group">
-                                <label>County</label>
-                                <input class="form-control" placeholder="Alachua or Bradford" id="county">
-                              </div>
-                              <div class="form-group">
-                                  <label>Program timeline</label>
-                                  <input class="form-control" placeholder="How many days/hours to complete?" id="timeline">
-                              </div>
-                              <div class="form-group">
-                                  <label>Does program offer a certificate upon completion?</label>
-                                  <input class="form-control" placeholder="Type here" id="certificate">
-                              </div>
-                              <div class="form-group">
-                                <label>Maximum Age</label>
-                                <input class="form-control" placeholder="Type here" id="ageMax">
-                              </div>
-                              <div class="form-group">
-                                  <label>Data tracking past success of program?</label>
-                                  <input class="form-control" placeholder="Type here" id="pastSuccess">
-                              </div>
-                              <div class="form-group">
-                                  <label>How do people find out about this program?</label>
-                                  <input class="form-control" placeholder="Type here" id="wordOut">
-                              </div>
-                              <div class="form-group">
-                                  <label>How is program funded?</label>
-                                  <input class="form-control" placeholder="Type here" id="funded">
-                              </div>
-                              <div class="form-group">
-                                  <label>Are there any partners to the program?</label>
-                                  <input class="form-control" placeholder="Type here" id="partners">
-                              </div>
-                              <div class="form-group">
-                                  <label>Are parents involved?</label>
-                                  <input class="form-control" placeholder="Type here" id="parentsInvolved">
-                              </div>
-                              <div class="form-group">
-                                <label>Funded by CareerSource NCFL?</label>
-                                <input class="form-control" placeholder="Yes or No" id="NCFLFunded">
-                              </div>
-                              <div class="form-group">
-                                  <label>Does program serve a targeted population?</label>
-                                  <input class="form-control" placeholder="Type here" id="servePop">
-                              </div>
-                              <div class="form-group">
-                                  <label>Is program offered in-person or online?</label>
-                                  <input class="form-control" placeholder="Type here" id="inPerson">
-                              </div>
-                              <div class="form-group">
-                                  <label>Time of day offered?</label>
-                                  <input class="form-control" placeholder="Type here" id="timeOfDay">
-                              </div>
-                              <div class="form-group">
-                                  <label>Any additional benefits?</label>
-                                  <textarea class="form-control" rows="3" placeholder="Type here" id="otherBenefits"></textarea>
-                              </div>
-                        <!-- /.col-lg-6 (nested) -->
-                    </div>
+                    <!-- </div> -->
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.panel-body -->
@@ -216,13 +213,14 @@
             </form>
         </div>
         <!-- /.col-lg-12 -->
-    </div>
+      </div>
     <!-- /.row -->
-</div>
-<!-- /#page-wrapper -->
-</div>
     </div>
-    <!-- /#wrapper -->
+  <!-- /#page-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+</div>
+
 <!-- Footer -->
 <footer id="footer" class="grid-block uk-float-left">
   <div class="wrapper grid-block">
