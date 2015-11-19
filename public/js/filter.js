@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
   These are utility functions that are going to be used to filter frontend data.
 */
@@ -18,9 +17,9 @@ function filterByLocation(programs,location){
   return programsByLocation;
 }
 
-/*
-  @param cost --> the cost to filter objects by
-*/
+
+
+//@param cost --> the cost to filter objects by
 function filterByCost(programs, cost){
   var programsByCost = _.filter(programs, function(program) {
     return program.cost === cost;
@@ -36,7 +35,7 @@ function filterByTimeLength(programs, timeline){
   return programsByTimeLength;
 }
 
-//filter by time of day
+//@marams timeOfDay --> filter by time of day
 function filterByTimeOfDay(programs, timeOfDay){
   var programsByTimeOfDay = _.filter(programs, function(program) {
     return program.timeOfDay === timeOfDay;
@@ -45,12 +44,53 @@ function filterByTimeOfDay(programs, timeOfDay){
 }
 
 
-//@params age --> filter by age
-// function filterByAge(programs, age){
-//   var programsByAge - _.filter(programs, function(program) {
-//     return program.age === age;
-//   });
-//   return programsByAge;
-// }
-=======
->>>>>>> bce7bdbf3db4a9ae6d6995f0f36c0111f3288202
+//@params age --> filter by age lower and upper
+function filterByAgeMin(programs, ageMin){
+  var programsByAgeMin = _.filter(programs, function(program) {
+    return program.ageMin >= ageMin;
+  });
+  return programsByAgeMin;
+}
+
+function filterByAgeMax(programs, ageMax){
+  var programsByAgeMax = _.filter(programs, function(program) {
+    return program.ageMax <= ageMax;
+  });
+  return programsByAgeMax;
+}
+
+/*
+  This is the overall filter function
+*/
+function filterPrograms(programs, location, cost, duration, age){
+    var filteredPrograms = programs;
+    if (location && cost && duration && age){ //each field has constraints on l c d and a
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+    } else if (location && cost && duration && !age){  //dont filter age (allow all age object properties)
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+    } else if (location && cost && !duration && age) {  //dont filter duration
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByAgeMin (filteredPrograms, age);
+    } else if (location && !cost && duration && age) { //dont filter cost
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+    } else if (!location && cost && duration && age) { //dont filter location
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+    }
+
+     else if (!location && !cost && !duration && !age) { //returns errything
+        filteredPrograms = programs;
+    } else if (location && !cost && !duration && !age)
+
+
+    return filteredPrograms;
+}
