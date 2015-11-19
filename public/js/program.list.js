@@ -31,7 +31,8 @@ $(document).ready(function(){
 
         $.ajax(options)
          .done(function(data){
-            console.log(data[0]);
+
+
             // now this will fetch <path/to/templates/content.hbs>
             $('#viewpage').render('viewpage', {
 
