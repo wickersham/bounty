@@ -64,7 +64,7 @@ $('#viewpage').render('viewpage', {
 
   $(function() {
 
-    var dd = new DropDown( $('#one') );
+    var dd = new DropDown( $('#location') );
 
     $(document).click(function() {
       // all dropdowns
@@ -74,7 +74,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#two') );
+    var dd = new DropDown( $('#cost') );
 
     $(document).click(function() {
       // all dropdowns
@@ -84,7 +84,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#three') );
+    var dd = new DropDown( $('#duration') );
 
     $(document).click(function() {
       // all dropdowns
@@ -94,7 +94,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#four') );
+    var dd = new DropDown( $('#age') );
 
     $(document).click(function() {
       // all dropdowns
