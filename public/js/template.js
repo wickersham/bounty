@@ -15,16 +15,8 @@ var response = [
       }
     ];
 
-$.handlebars({
-    templatePath: 'templates'
-});
 
-// now this will fetch <path/to/templates/content.hbs>
-$('#viewpage').render('viewpage', {
-    employer: 'Hello',
-    field2: 'world!',
-    programs: response
-});
+
 
 ////////////////////////////////////////////
 // Dropdowns on viewpage; publicView.html //
