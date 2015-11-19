@@ -60,7 +60,7 @@ $('#viewpage').render('viewpage', {
     getIndex : function() {
       return this.index;
     }
-  }
+  };
 
   $(function() {
 
