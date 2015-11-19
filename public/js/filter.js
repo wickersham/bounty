@@ -1,1 +1,3 @@
-test
+/*
+  These are utility functions that are going to be used to filter frontend data.
+*/
