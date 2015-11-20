@@ -26,6 +26,9 @@ server.get("/list", function(req, res) {
   res.sendFile(__dirname+"/public/pages/publicView.html");
 });
 
+server.get("/password", function(req, res) {
+  res.sendFile(__dirname+"/public/pages/password.html");
+});
 
 //server routes
 server.get("/api/programs", function(req, res){
