@@ -16,7 +16,8 @@
         Maximum Age: {{this.ageMax}}<br>
         Program Url: {{this.programUrl}}<br>
       </div>
-      <div>
+
+      <div class="list-group-item-text more-info" style = "display:none">
         Affiliations: {{this.affiliation}}<br>
         Other Benefits: {{this.otherBenefits}}<br>
         Provided Certification: {{this.certificate}}<br>
@@ -37,6 +38,8 @@
         Bring Day One: {{this.bringDayOne}}<br>
         In person: {{this.inPerson}}
       </div>
+      <button type="button" class = "btn btn-success">More info</button>
+
     </div>
   </div>
   {{/each}}
