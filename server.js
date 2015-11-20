@@ -55,16 +55,7 @@ server.get("/api/programs/time/:timeline", function(req, res){
 });
 
 
-// template
 
-// server.get("/api/programs/", function(req, res){
-//   Program.find({}, function(err, programs) {
-//     if(err) {
-//       console.log(err);
-//     }
-//     res.send(programs);
-//   });
-// });
 
 //refers to our mongoose schema
 server.post("/api/programs", function(req, res){
