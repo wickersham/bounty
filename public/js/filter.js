@@ -64,12 +64,15 @@ function filterByAgeMax(programs, ageMax){
 */
 function filterPrograms(programs, location, cost, duration, age){
     var filteredPrograms = programs;
-    if (location && cost && duration && age){ //each field has constraints on l c d and a
+        //constraints on all four params (only these locations costs durations and ages)
+    if (location && cost && duration && age){
         filteredPrograms = filterByLocation(programs, location);
         filteredPrograms = filterByCost(filteredPrograms, cost);
         filteredPrograms = filterByTimeLength(filteredPrograms, duration);
         filteredPrograms = filterByAgeMin(filteredPrograms, age);
-    } else if (location && cost && duration && !age){  //dont filter age (allow all age object properties)
+    }
+        //three filter params (one field doesnt matter)
+    else if (location && cost && duration && !age){  //dont filter age (allow all age object properties)
         filteredPrograms = filterByLocation(programs, location);
         filteredPrograms = filterByCost(filteredPrograms, cost);
         filteredPrograms = filterByTimeLength(filteredPrograms, duration);
@@ -87,10 +90,50 @@ function filterPrograms(programs, location, cost, duration, age){
         filteredPrograms = filterByAgeMin(filteredPrograms, age);
     }
 
-     else if (!location && !cost && !duration && !age) { //returns errything
-        filteredPrograms = programs;
-    } else if (location && !cost && !duration && !age)
 
+                  //one filter param
+    else if (location && !cost && !duration && !age) { //filter by loc
+        filteredPrograms = filterByLocation(programs, location);
+
+    } else if (!location && cost && !duration && !age) { //filter by cost
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+
+    } else if (!location && !cost && duration && !age) { //filter by duration
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+
+    } else if (!location && !cost && !duration && age) { //filter by age
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+    }
+
+                    //two filter params
+    else if (location && cost && !duration && !age) { //filter by location and cost
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+
+    } else if (location && !cost && duration && !age) { //filter by location and duration
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+
+    } else if (location && !cost && !duration && age) { //filter by location and age
+        filteredPrograms = filterByLocation(programs, location);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+
+    } else if (!location && cost && duration && !age) { //filter by cost and duration
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+
+    } else if (!location && cost && !duration && age) { //filter by cost and age
+        filteredPrograms = filterByCost(filteredPrograms, cost);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+
+    } else if (!location && !cost && duration && age) { //filter by duration and age
+        filteredPrograms = filterByTimeLength(filteredPrograms, duration);
+        filteredPrograms = filterByAgeMin(filteredPrograms, age);
+    }
+
+    else if (!location && !cost && !duration && !age) { //returns errything
+            filteredPrograms = programs;
+        }
 
     return filteredPrograms;
 }
