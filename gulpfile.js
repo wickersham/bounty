@@ -33,7 +33,7 @@ gulp.task("css-to-build", function(){
 gulp.task("css", ["css-to-build"], function(){
     return gulp.src(["public/css/**/*.css", "!public/css/**/*.min.css"])
         .pipe(mcss())
-        .pipe(concat("main.css"))
+        .pipe(concat("main.min.css"))
         .pipe(gulp.dest("build/public/css"))
 });
 
@@ -65,7 +65,7 @@ gulp.task("js-to-build", function(){
 gulp.task("js", ["hint", "js-to-build"], function(){
     return gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
         .pipe(uglify())
-        .pipe(concat("app.js"))
+        .pipe(concat("app.min.js"))
         .pipe(gulp.dest("build/public/js"))
 });
 
