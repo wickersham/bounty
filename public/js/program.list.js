@@ -12,6 +12,7 @@ $(document).ready(function(){
     $("#viewpage").on("click", "button", function(){
       $(this).siblings(".more-info").fadeIn();
     });
+    
     $("#search").on('click', getPrograms);
 
     //This function will obtain the programs collection from the server

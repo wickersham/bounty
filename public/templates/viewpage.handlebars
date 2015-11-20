@@ -6,6 +6,9 @@
       <h4 class="list-group-item-heading"><strong>{{this.programName}}</strong></h4>
       <div class="list-group-item-text">
         Program Description: {{this.description}}<br>
+      </div>
+
+      <div class="list-group-item-text more-info" style = "display:none">
         Phone Number: {{this.phoneNumber}}<br>
         Location: {{this.location}}<br>
         County: {{this.county}}<br>
@@ -15,9 +18,6 @@
         Minimum Age: {{this.ageMin}}<br>
         Maximum Age: {{this.ageMax}}<br>
         Program Url: {{this.programUrl}}<br>
-      </div>
-
-      <div class="list-group-item-text more-info" style = "display:none">
         Affiliations: {{this.affiliation}}<br>
         Other Benefits: {{this.otherBenefits}}<br>
         Provided Certification: {{this.certificate}}<br>
@@ -44,5 +44,3 @@
   </div>
   {{/each}}
 </p>
-
-<!-- This will be the pop-up -->
