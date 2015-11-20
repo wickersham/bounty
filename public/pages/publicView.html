@@ -16,7 +16,7 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
@@ -26,6 +26,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+    
+    <!-- Grabs a minified css once gulp builds it -->
+    <link rel="stylesheet" href="../css/main.min.css">
+    
     <!-- Scripts for dropdowns -->
       <noscript>
         <link rel="stylesheet" type="text/css" href="css/noJS.css" />
@@ -40,32 +44,6 @@
     <span class="blue">CareerSource</span><span class="dark-orange"> - </span><span class="green">Resource Guide</span>
 </h1>
  </header>
-
-
- <div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Bradford Tech Council</h4>
-        </div>
-        <div class="modal-body">
-          <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-               <h4>(352)555-5555</h4>
-                <p class="location">Location</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end container -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -214,14 +192,14 @@
       </div>
       <!-- /container -->
 
-        
+
          </header>
 <!-- Page/View Heading -->
 
       <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header">List of Potential Employers:
+                <h3 class="page-header">List of Programs:
                     <small>Click a program for more details</small>
                 </h3>
             </div>
@@ -236,7 +214,7 @@
 <footer id="footer" class="grid-block uk-float-left">
   <div class="wrapper grid-block">
     <section id="copyright" class="grid-block uk-float-right">
-      <div class="module   deepest">
+      <div class="module deepest">
         <div>
           <p align="center">
             <a href="http://careersourceflorida.com"><img src="https://careersourcencfl.com/images/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
@@ -274,5 +252,8 @@
     <!-- Handlebars template for programs list -->
     <script src="../js/template.js"></script>
     <script src = "../js/program.list.js"></script>
+
+    <!-- Grab minified js once gulp has built it -->
+    <script src="../js/app.min.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ gulp.task("css-to-build", function(){
 gulp.task("css", ["css-to-build"], function(){
     return gulp.src(["public/css/**/*.css", "!public/css/**/*.min.css"])
         .pipe(mcss())
-        .pipe(concat("main.css"))
+        .pipe(concat("main.min.css"))
         .pipe(gulp.dest("build/public/css"))
 });
 
@@ -65,7 +65,7 @@ gulp.task("js-to-build", function(){
 gulp.task("js", ["hint", "js-to-build"], function(){
     return gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
         .pipe(uglify())
-        .pipe(concat("app.js"))
+        .pipe(concat("app.min.js"))
         .pipe(gulp.dest("build/public/js"))
 });
 
@@ -120,14 +120,9 @@ gulp.task("mocha-test", function(){
                 .on("error", util.log);
 });
 
-//loads qunit tests from test folder and runs them, commented until there is a functional test.
-gulp.task("qunit-test", function(){
-    return gulp.src("test/*.html")
-                .pipe(qunit());
-});
 
 //runs all tests
-gulp.task("tests", ["mocha-test", "qunit-test"]);
+gulp.task("tests", ["mocha-test"]);
 
 //hints for tests!
 gulp.task("test-hint", function(){
