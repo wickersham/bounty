@@ -3,81 +3,43 @@
   {{#each programs}}
   <div class="list-group">
     <div class="list-group-item">
-
-      <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">{{this.programName}}</h4>
+      <h4 class="list-group-item-heading"><strong>{{this.programName}}</strong></h4>
+      <div class="list-group-item-text">
+        Program Description: {{this.description}}<br>
+        Phone Number: {{this.phoneNumber}}<br>
+        Location: {{this.location}}<br>
+        County: {{this.county}}<br>
+        Email: {{this.email}}<br>
+        Cost Range: {{this.cost}}<br>
+        Meals Provided: {{this.meals}}<br>
+        Minimum Age: {{this.ageMin}}<br>
+        Maximum Age: {{this.ageMax}}<br>
+        Program Url: {{this.programUrl}}<br>
       </div>
-      <div class="modal-body">
-        <p class="list-group-item-text">
-          Program Description: {{this.description}}<br>
-          Phone Number: {{this.phoneNumber}}<br>
-          Location: {{this.location}}<br>
-          County: {{this.county}}<br>
-          Email: {{this.email}}<br>
-          Cost Range: {{this.cost}}<br>
-          Meals Provided: {{this.meals}}<br>
-          Minimum Age: {{this.ageMin}}<br>
-          Maximum Age: {{this.ageMax}}<br>
-          Program Url: {{this.programUrl}}<br>
-        </p>
+      <div>
+        Affiliations: {{this.affiliation}}<br>
+        Other Benefits: {{this.otherBenefits}}<br>
+        Provided Certification: {{this.certificate}}<br>
+        Timeline: {{this.timeline}}<br>
+        Time of Day:{{this.timeOfDay}}<br>
+        Past Program Successes: {{this.pastSuccess}}<br>
+        Past Participants: {{this.pastParticipants}}<br>
+        Word Out: {{this.wordOut}}<br>
+        How Funded: {{this.funded}}<br>
+        Current Impediments: {{this.impediments}}<br>
+        Average Number of Participants: {{this.avgNumParticip}}<br>
+        Contact Name: {{this.contactName}}<br>
+        Partners: {{this.partners}}<br>
+        Scholarships: {{this.scholarships}}<br>
+        Parental Involvment: {{this.parentsInvolved}}<br>
+        How Success is Measured: {{this.measureSuccess}}<br>
+        NCFL Funded: {{this.NCFLFunded}}<br>
+        Bring Day One: {{this.bringDayOne}}<br>
+        In person: {{this.inPerson}}
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
     </div>
   </div>
   {{/each}}
 </p>
 
-
-
-
-
 <!-- This will be the pop-up -->
-<!-- Affiliations: {{this.affiliation}}<br>
-Other Benefits: {{this.otherBenefits}}<br>
-Provided Certification: {{this.certificate}}<br>
-Timeline: {{this.timeline}}<br>
-Time of Day:{{this.timeOfDay}}<br>
-Past Program Successes: {{this.pastSuccess}}<br>
-Past Participants: {{this.pastParticipants}}<br>
-Word Out: {{this.wordOut}}<br>
-How Funded: {{this.funded}}<br>
-Current Impediments: {{this.impediments}}<br>
-Average Number of Participants: {{this.avgNumParticip}}<br>
-Contact Name: {{this.contactName}}<br>
-Partners: {{this.partners}}<br>
-Scholarships: {{this.scholarships}}<br>
-Parental Involvment: {{this.parentsInvolved}}<br>
-How Success is Measured: {{this.measureSuccess}}<br>
-NCFL Funded: {{this.NCFLFunded}}<br>
-Bring Day One: {{this.bringDayOne}}<br>
-In person: {{this.inPerson}} -->
-
-
-
-<!-- <div class="modal-header">
-  <a class="close" data-dismiss="modal">&times;</a>
-  <h3>Modal header 2</h3>
-</div>
-<div class="modal-body">
-  <p>One body...</p>
-</div>
-<div class="modal-footer">
-  <a class="btn" data-dismiss="modal">Close</a>
-</div> -->
