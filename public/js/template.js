@@ -1,19 +1,3 @@
-// Handlebars template for the programs list viewpage. Do Not Touch!
-
-var response = [
-      {
-        school: "Bradford Tech Center",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        phone: "555-555-5555",
-        location: "Gainesville, FL"
-      },
-      {
-        school: "CSI Academy",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        phone: "555-555-5555",
-        location: "Gainesville, FL"
-      }
-    ];
 
 
 
