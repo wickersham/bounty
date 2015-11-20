@@ -19,17 +19,10 @@ gulp.task("hint", function(){
         .pipe(jshint.reporter("default"))
 });
 
-//minifies and concats for load speed.
-gulp.task("js-to-build", function(){
-    return gulp.src("public/js/**/*.min.js")
-        .pipe(gulp.dest("build/public/js"))
-});
-
-gulp.task("js", ["hint", "js-to-build"], function(){
-    return gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
-        .pipe(uglify())
-        .pipe(concat("app.js"))
-        .pipe(gulp.dest("build/public/js"))
+//minifies and concats for load speed, the following deal only with the public folder and all subfolders.
+gulp.task("bootstrap", function(){
+    return gulp.src("public/bootstrap-filter-dropdown/**/*")
+        .pipe(gulp.dest("build/public/bootstrap-filter-dropdown"))
 });
 
 gulp.task("css-to-build", function(){
@@ -44,7 +37,81 @@ gulp.task("css", ["css-to-build"], function(){
         .pipe(gulp.dest("build/public/css"))
 });
 
-gulp.task("build", ["js", "css"]);
+gulp.task("dist",function(){
+    return gulp.src("public/dist/**/*")
+        .pipe(gulp.dest("build/public/dist"))
+});
+
+gulp.task("font-awesome",function(){
+    return gulp.src("public/font-awesome/**/*")
+        .pipe(gulp.dest("build/public/font-awesome"))
+});
+
+gulp.task("fonts", function(){
+    return gulp.src("public/fonts/**/*")
+        .pipe(gulp.dest("build/public/fonts"))
+});
+
+gulp.task("img", function(){
+    return gulp.src("public/img/**/*")
+        .pipe(gulp.dest("build/public/img"))
+});
+
+gulp.task("js-to-build", function(){
+    return gulp.src("public/js/**/*.min.js")
+        .pipe(gulp.dest("build/public/js"))
+});
+
+gulp.task("js", ["hint", "js-to-build"], function(){
+    return gulp.src(["public/js/**/*.js", "!public/js/**/*.min.js"])
+        .pipe(uglify())
+        .pipe(concat("app.js"))
+        .pipe(gulp.dest("build/public/js"))
+});
+
+gulp.task("less", function(){
+    return gulp.src("public/less/**/*")
+        .pipe(gulp.dest("build/public/less"))
+});
+
+gulp.task("pages", function(){
+    return gulp.src("public/pages/**/*")
+        .pipe(gulp.dest("build/public/pages"))
+});
+
+gulp.task("templates", function(){
+    return gulp.src("public/templates/**/*")
+        .pipe(gulp.dest("build/public/templates"))
+});
+
+gulp.task("public-files", function(){
+    return gulp.src(["public/bower.json", "public/index.html", "public/LICENSE", "public/README.md"])
+        .pipe(gulp.dest("build/public"))
+});
+
+gulp.task("public", ["bootstrap", "css", "dist", "font-awesome", "fonts", "img", "js", "less", "pages", "templates", "public-files"]);
+
+//This minifies and concats all files/folders not in public.
+gulp.task("models", function(){
+    return gulp.src("models/**/*")
+        .pipe(uglify())
+        .pipe(concat("Program.js"))
+        .pipe(gulp.dest("build/models"))
+});
+
+gulp.task("server", function(){
+    return gulp.src("server/**/*")
+        .pipe(uglify())
+        .pipe(concat("route.js"))
+        .pipe(gulp.dest("build/server"))
+});
+
+gulp.task("dir-files", function(){
+    return gulp.src(["handlebars.jquery.json", "package.json", "server.js"])
+        .pipe(gulp.dest("build/"))
+});
+
+gulp.task("build", ["models", "public", "server", "dir-files"])
 
 //loads mocha tests from test folder and runs them.
 gulp.task("mocha-test", function(){
