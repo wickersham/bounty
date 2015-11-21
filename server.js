@@ -84,7 +84,6 @@ server.post("/api/programs", function(req, res){
       pastParticipants: req.body.pastParticipants,
       wordOut:          req.body.wordOut,
       funded:           req.body.funded,
-      impediments:      req.body.impediments,
       avgNumParticip:   req.body.avgNumParticip,
       description:      req.body.description,
       programUrl:       req.body.programUrl,
