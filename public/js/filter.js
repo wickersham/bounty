@@ -9,8 +9,10 @@
   @param county --> the county to filter the objects by
   @return a collection of objects that are located at the specified county
 */
+
 function filterByCounty(programs, county){
   var programsByCounty = _.filter(programs, function(program){
+
       return program.county === county;
   });
 
@@ -132,6 +134,9 @@ function filterPrograms(programs, county, cost, duration, age){
 
     else if (!county && !cost && !duration && !age) { //returns errything
         filteredPrograms = programs;
+
+    } else if (location && !cost && !duration && !age){
+        filteredPrograms = filterByLocation(programs, location);
     }
 
     return filteredPrograms;

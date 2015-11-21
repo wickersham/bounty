@@ -59,16 +59,7 @@ server.get("/api/programs/time/:timeline", function(req, res){
 });
 
 
-// template
 
-// server.get("/api/programs/", function(req, res){
-//   Program.find({}, function(err, programs) {
-//     if(err) {
-//       console.log(err);
-//     }
-//     res.send(programs);
-//   });
-// });
 
 //refers to our mongoose schema
 server.post("/api/programs", function(req, res){
@@ -93,7 +84,6 @@ server.post("/api/programs", function(req, res){
       pastParticipants: req.body.pastParticipants,
       wordOut:          req.body.wordOut,
       funded:           req.body.funded,
-      impediments:      req.body.impediments,
       avgNumParticip:   req.body.avgNumParticip,
       description:      req.body.description,
       programUrl:       req.body.programUrl,
