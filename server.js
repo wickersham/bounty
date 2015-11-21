@@ -3,6 +3,7 @@ var server = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Program = require("./models/Program");
+var auth = require("./server/config");
 
 mongoose.connect("mongodb://localhost/programDatabase");
 
@@ -26,6 +27,9 @@ server.get("/list", function(req, res) {
   res.sendFile(__dirname+"/public/pages/publicView.html");
 });
 
+server.get("/password", function(req, res) {
+  res.sendFile(__dirname+"/public/pages/password.html");
+});
 
 //server routes
 server.get("/api/programs", function(req, res){
@@ -100,6 +104,17 @@ server.post("/api/programs", function(req, res){
         }
           res.json(program);
       });
+});
+
+server.post("/password", function(req, res){
+    var password = req.body.password;
+    console.log(password);
+    console.log(auth.password);
+    if(password === auth.password){
+        res.redirect("/submit");
+    } else {
+        res.redirect("/password");
+    }
 });
 
 server.listen(port, function() {
