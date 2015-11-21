@@ -14,6 +14,6 @@ This is a project undertaken by the Gainesville Dev Academy in an attempt to cla
 
 ### Gulpfile
 
-The gulpfile has some basic server tests to help with future development. "gulp tests" will run all current tests, which currently only check the sever's get and post routes. You can also run "gulp hints" to look through all user generated JavaScript and check for syntax errors.
+The gulpfile has some basic server tests to help with future development. "gulp tests" will run all current tests, which currently only check the server's get and post routes. You can also run "gulp hints" to look through all user generated JavaScript and check for syntax errors.
 
 The gulpfile also has the ability to concat and minify the entire project to help speed up load times. Running "gulp build" will copy all files into a "/build" directory and minify all custom code in the project. 
