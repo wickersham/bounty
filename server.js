@@ -63,7 +63,6 @@ server.get("/api/programs/time/:timeline", function(req, res){
 
 //refers to our mongoose schema
 server.post("/api/programs", function(req, res){
-    console.log(req.body);
     var program = new Program({
       programName:      req.body.programName,
       county:           req.body.county,
@@ -107,8 +106,7 @@ server.post("/api/programs", function(req, res){
 
 server.post("/password", function(req, res){
     var password = req.body.password;
-    console.log(password);
-    console.log(auth.password);
+    
     if(password === auth.password){
         res.redirect("/submit");
     } else {
