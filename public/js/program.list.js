@@ -33,9 +33,7 @@ $(document).ready(function(){
       if(duration ==="Time Length:"){duration = false;} else { duration = parseInt(duration.substring(1).split(" ")[0]);}
       if(cost === "Cost:"){cost = false;} else { cost = parseInt(cost.substring(1));}
 
-      console.log(age);
-      console.log(duration);
-      console.log(cost);
+
         var options = {
             method: "GET",
             url: "/api/programs",
@@ -46,9 +44,8 @@ $(document).ready(function(){
          .done(function(data){
             // now this will fetch <path/to/templates/content.hbs>
             //Filter the data based on options from the list
-            console.log(data);
             var response = filterPrograms(data,county,cost,duration,age);
-            console.log(response);
+            
             $('#viewpage').render('viewpage', {
 
                 programs: response
