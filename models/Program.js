@@ -77,10 +77,6 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
-    impediments: {
-                    type: String,
-                    required: true
-                 },
     avgNumParticip: {
                     type: Number,
                     min: 0

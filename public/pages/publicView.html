@@ -11,14 +11,9 @@
 
     <title>Programs Offered</title>
 
-
-
-
-
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
 
     <!-- Custom CSSs -->
@@ -26,10 +21,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
-    
+
     <!-- Grabs a minified css once gulp builds it -->
     <link rel="stylesheet" href="../css/main.min.css">
-    
+
     <!-- Scripts for dropdowns -->
       <noscript>
         <link rel="stylesheet" type="text/css" href="css/noJS.css" />
@@ -66,10 +61,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
                    <li>
-                       <a href="/" class="">Home</a>
+                       <a href="/">Home</a>
                    </li>
                     <li>
-                        <a href="#copyright" class="">Contact</a>
+                        <a href="#copyright">Contact</a>
                     </li>
 
                 </ul>
@@ -83,11 +78,12 @@
         <div class="row" style="padding: 30px;">
             <div class="col-sm-3">
               <div id="location" class="wrapper-dropdown-3" tabindex="1">
-              	<span>Location:</span>
+              	<span>County:</span>
               	<ul class="dropdown">
-              		<li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+
               		<li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
               		<li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+
               	</ul>
               </div>
             </div>
@@ -111,9 +107,13 @@
                 <div id="cost" class="wrapper-dropdown-3" tabindex="1">
                   <span>Cost:</span>
                   <ul class="dropdown">
-                    <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                    <li><a href="#"><i class="icon-truck icon-large"></i>less than $50</a></li>
-                    <li><a href="#"><i class="icon-plane icon-large"></i>more than $50</a></li>
+
+                    <li><a href="#"><i class="icon-envelope icon-large"></i>$0</a></li>
+                    <li><a href="#"><i class="icon-truck icon-large"></i>$500</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>$1000</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>$10000</a></li>
+
+
                   </ul>
                 </div>
               </div>
@@ -137,9 +137,12 @@
                   <div id="duration" class="wrapper-dropdown-3" tabindex="1">
                     <span>Time Length:</span>
                     <ul class="dropdown">
-                      <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                      <li><a href="#"><i class="icon-truck icon-large"></i>less than 1 hour</a></li>
-                      <li><a href="#"><i class="icon-plane icon-large"></i>more than 1 hour</a></li>
+
+                      <li><a href="#"><i class="icon-envelope icon-large"></i>&lt;10 hrs</a></li>
+                      <li><a href="#"><i class="icon-truck icon-large"></i>&lt;40 hrs</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>&lt;100 hrs</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>&lt;240 hrs</a></li>
+
                     </ul>
                   </div>
                 </div>
@@ -155,17 +158,18 @@
                     $(document).click(function() {
                     // all dropdowns
                     $('.wrapper-dropdown-1').removeClass('active');
-                    });
+                  });
                   });
                 </script>
                 <!-- Dropdown four -->
                   <div class="col-sm-3">
                     <div id="age" class="wrapper-dropdown-3" tabindex="1">
-                      <span>Age Range:</span>
+                      <span>Minimum Age:</span>
                       <ul class="dropdown">
-                        <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                        <li><a href="#"><i class="icon-truck icon-large"></i>foo</a></li>
-                        <li><a href="#"><i class="icon-plane icon-large"></i>bar</a></li>
+
+                        <li><a href="#"><i class="icon-envelope icon-large"></i>&gt;16</a></li>
+                        <li><a href="#"><i class="icon-truck icon-large"></i>&gt;18</a></li>
+
                       </ul>
                     </div>
                     <br>
@@ -206,7 +210,7 @@
          </div>
       </div>
 <!-- Handlebars viewport -->
-      <div id="viewpage"></div>
+      <div id="viewpage" class="container"></div>
   <!-- /container -->
         <hr>
 
@@ -229,8 +233,6 @@
               <a href="/report-fraud-waste-or-abuse">click here</a>.
             </small>
           <br>
-            <!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
-            <br />-->
             <small>To report an issue with the website or make a suggestion
               <a href="/contact-webmaster">contact the webmaster</a>.
             </small>

@@ -11,16 +11,22 @@
 
     <title>Program:</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css/programs.css" rel="stylesheet">
+    <link href="css/programs.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/demo.css">
+
 
     <!-- Custom Fonts -->
+
     <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
-    
+
+
+
     <!-- Grabs a minified css once gulp builds it -->
-    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
 
 </head>
@@ -105,13 +111,13 @@
                                 </div>
                         <h3>Program details:</h3>
                                 <div class="form-group">
-                                    <label>Cost</label>
+                                    <label>Cost(Max $)</label>
                                     <select class="form-control" placeholder="Select one" id="cost">
                                         <option>Select One</option>
-                                        <option>Free</option>
-                                        <option>$0 - $500</option>
-                                        <option>$500 - $1,000</option>
-                                        <option>More than $1,000</option>
+                                        <option>0</option>
+                                        <option>500</option>
+                                        <option>1000</option>
+                                        <option>10000</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -254,7 +260,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/passport.js"></script>
-    
+
     <!-- Grab minified js once gulp has built it -->
     <script src="../js/app.min.js"></script>
 </body>

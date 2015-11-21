@@ -5,7 +5,7 @@
  */
 /* new stuff starts here ends before .color*/
 .pull-right{
- float: right;     /* css for more info button this relies on size of description which if too long may move the button out of the program object i.e.(blue box)*/
+ float: right;   
  padding-left: 110px;
  padding-top: 30px;
 }
