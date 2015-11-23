@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-//user models
+//program model
 var programSchema = new Schema({
     programName: {
                     type: String,
@@ -77,15 +77,11 @@ var programSchema = new Schema({
                     type: String,
                     required: true
                  },
-    impediments: {
-                    type: String,
-                    required: true
-                 },
     avgNumParticip: {
                     type: Number,
                     min: 0
                   },
-    description: {
+    description:  {
                     type: String,
                     required: true
                   },

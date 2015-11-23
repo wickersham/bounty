@@ -1,30 +1,6 @@
-// Handlebars template for the programs list viewpage. Do Not Touch!
 
-var response = [
-      {
-        school: "Bradford Tech Center",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        phone: "555-555-5555",
-        location: "Gainesville, FL"
-      },
-      {
-        school: "CSI Academy",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        phone: "555-555-5555",
-        location: "Gainesville, FL"
-      }
-    ];
 
-$.handlebars({
-    templatePath: 'templates'
-});
 
-// now this will fetch <path/to/templates/content.hbs>
-$('#viewpage').render('viewpage', {
-    employer: 'Hello',
-    field2: 'world!',
-    programs: response
-});
 
 ////////////////////////////////////////////
 // Dropdowns on viewpage; publicView.html //
@@ -64,7 +40,7 @@ $('#viewpage').render('viewpage', {
 
   $(function() {
 
-    var dd = new DropDown( $('#one') );
+    var dd = new DropDown( $('#location') );
 
     $(document).click(function() {
       // all dropdowns
@@ -74,7 +50,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#two') );
+    var dd = new DropDown( $('#cost') );
 
     $(document).click(function() {
       // all dropdowns
@@ -84,7 +60,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#three') );
+    var dd = new DropDown( $('#duration') );
 
     $(document).click(function() {
       // all dropdowns
@@ -94,7 +70,7 @@ $('#viewpage').render('viewpage', {
   });
   $(function() {
 
-    var dd = new DropDown( $('#four') );
+    var dd = new DropDown( $('#age') );
 
     $(document).click(function() {
       // all dropdowns

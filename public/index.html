@@ -13,9 +13,11 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Grabs a minified css once gulp builds it -->
+    <link rel="stylesheet" href="../css/main.min.css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,46 +32,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <body>
-
-    <!-- Navigation -->
-    <!-- <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-    <!-- Header -->
-    <!-- <a name="banner"> -->
-    <div class="intro-header">
+    <!-- Welcome to CareerSource!-->
+    <div class="intro-header" style="padding-bottom: 80px;">
       <a href='#fixed-table'>
-      <img src="http://s4.evcdn.com/images/edpborder500/I0-001/023/447/563-7.png_/careersource-ncfl-presents-startup-showcase-featur-63.png" width="600px" height="600px" style="background-color: #fff;" alt="">
+      <img src="img/intro-bg.png" width="600px" height="600px" style="background-color: #fff;" alt="some">
       </a>
     </div>
 
-    <!-- Divider for second header -->
-    <!-- <a  name="contact"></a> -->
-      <div class="banner" id="fixed-table" style="z-index:1000">
+      <!-- Banner -->
+      <div class="banner" id="fixed-table" style="z-index:1000; padding-bottom: 40px;" alt="some">
       <!-- Container -->
           <div class="container">
             <div class="col-md-5">
@@ -79,7 +50,7 @@
                       <a href="/list" class="btn btn-success btn-lg"><i class="fa fa-search fa-fw"></i> <span class="network-name">Job Seekers!</span></a>
                   </li>
                   <li>
-                      <a href="/submit" class="btn btn-success btn-lg"><i class="fa fa-building-o fa-fw"></i> <span class="network-name">Organizations!</span></a>
+                      <a href="/password" class="btn btn-success btn-lg"><i class="fa fa-building-o fa-fw"></i> <span class="network-name">Organizations!</span></a>
                   </li>
                 </ul>
             </div>
@@ -92,17 +63,16 @@
   <!-- next container -->
 	<a  name="services"></a>
     <div class="content-section-a">
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Lorem ipsum dolor sit amet:<br>consectetur adipiscing elit</h2>
-                    <p class="lead">Donec posuere lectus vitae felis viverra iaculis. Nulla quis urna in metus imperdiet pellentesque quis in lorem. Proin sit amet odio euismod, pharetra velit vitae, gravida nunc. Fusce ut facilisis magna. Pellentesque pulvinar nisl augue, in dapibus orci cursus non. Morbi a enim leo. Mauris cursus lobortis lacus, sit amet efficitur felis lobortis in. Donec consequat massa et nibh condimentum placerat. Fusce euismod libero a velit luctus, a vulputate augue auctor.</p>
+                    <h2 class="section-heading">What is CareerSource?</h2>
+                    <p class="lead">CareerSource North Central Florida is the regional workforce board for Alachua and Bradford Counties. Formerly known as FloridaWorks, CareerSource NCFL launched a new brand in February 2014 as part of a statewide branding initiative. CareerSource NCFL is one of 24 regions in the CareerSource Florida network, a statewide network of workforce professionals.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
+                    <img class="img-responsive" src="img/ipad.png" alt="some">
                 </div>
             </div>
         </div>
@@ -110,67 +80,123 @@
     </div>
     <!-- /.content-section-b -->
     <div class="content-section-b" id="about">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Donec sit amet ultrices sem<br>hodor</h2>
-                    <p class="lead">Sed libero mi, suscipit sit amet dui eu, consectetur blandit tortor. Duis gravida vel lacus dictum rutrum. Sed efficitur at diam nec sodales. Mauris sit amet faucibus ligula. Integer vulputate orci quis finibus dictum. Duis accumsan quis nulla vitae ullamcorper. Aliquam dapibus ante magna, a pharetra augue posuere laoreet. Praesent eu velit egestas, semper est eu, porta nisl. Cras feugiat, elit ut tristique facilisis, est nunc pretium tellus, vel mollis sapien eros eget elit. Cras dictum erat at bibendum lacinia. Nulla facilisi. Integer pretium rutrum consequat.</p>
+                    <h2 class="section-heading" style="color: orange;">VISION:</h2>
+                    <p class="lead">Our community will have a world-class workforce that meets the needs of business and provides opportunities for job seekers today and in the future.</p><br>
+                    <p class="lead">CareerSource NCFL’s vision is externally focused, market-oriented, and describes how we want to impact the world. This vision serves to clarify our direction and to assist our team and partners to understand how everyday actions can help us work toward achieving our ultimate goals.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/dog.png" alt="some">
                 </div>
             </div>
-
         </div>
     </div>
-</div>
+
+    <div class="content-section-c">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading" style="color: orange;">MISSION:</h2>
+                    <p class="lead">Everybody Works. Growing business and jobs through a skilled workforce.</p><br>
+                    <p class="lead">The mission statement serves as the anchoring point for our organization. It is from our mission that CORE VALUES, GOALS and STRATEGIES can be developed and implemented.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="http://images.slideplayer.com/18/5677394/slides/slide_10.jpg" alt="some">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <div class="content-section-d">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading" style="color: orange;">CORE VALUES:</h2>
+                    <p class="lead">Our values define us and remind us of the key reasons we exist and help us to focus on what is important to us as individuals and as an organization.</p><br>
+                    <!-- <p class="lead">We Value:
+                    <ul>
+                      <li>Customer Focus: We listen to our customers, respond quickly to their needs, and work with them to prepare for future requirements.</li>
+                      <li>Effectiveness: We are focused on results and constantly seek ways to be more efficient.</li>
+                      <li>Professionalism: We treat everyone with respect, courtesy, and personal attention.</li>
+                      <li>Collaboration: We work together with a variety of partners to achieve our mission.</li>
+                      <li>Inclusion: We believe that diversity makes us stronger and welcome those who challenge us to see things differently.</li>
+                      <li>Integrity: Our commitment to always do the right thing guides our decisions every day.</li>
+                      <li>Accountability: Each of us recognizes our responsibilities, and we use measures to show our success.</li>
+                      <li>Innovation: We continually seek new solutions and better ways to do our jobs.</li>
+                      <li>Leadership: We lead by example within our organization and throughout the community.</li>
+                    </ul>
+                    </p> -->
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="https://media.licdn.com/media/p/6/005/052/233/2fe7dfc.png" style="margin-top: 19px;" alt="some">
+                </div>
+                <div class="col-lg-12">
+                  <h3 class="section-heading">We Value:</h3>
+                  <p class="lead">
+                  <ul>
+                    <li><span style="color:green;">Customer Focus</span>: We listen to our customers, respond quickly to their needs, and work with them to prepare for future requirements.</li>
+                    <li><span style="color:green;">Effectiveness</span>: We are focused on results and constantly seek ways to be more efficient.</li>
+                    <li><span style="color:green;">Professionalism</span>: We treat everyone with respect, courtesy, and personal attention.</li>
+                    <li><span style="color:green;">Collaboration</span>: We work together with a variety of partners to achieve our mission.</li>
+                    <li><span style="color:green;">Inclusion</span>: We believe that diversity makes us stronger and welcome those who challenge us to see things differently.</li>
+                    <li><span style="color:green;">Integrity</span>: Our commitment to always do the right thing guides our decisions every day.</li>
+                    <li><span style="color:green;">Accountability</span>: Each of us recognizes our responsibilities, and we use measures to show our success.</li>
+                    <li><span style="color:green;">Innovation</span>: We continually seek new solutions and better ways to do our jobs.</li>
+                    <li><span style="color:green;">Leadership</span>: We lead by example within our organization and throughout the community.</li>
+                  </ul>
+                  </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
-<footer>
-  <footer id="footer" class="grid-block uk-float-left">
-<div class="wrapper grid-block">
-</footer>
-  <section id="copyright" class="grid-block uk-float-right">
-    <div class="module   deepest">
-      <div>
-        <p align="center">
-          <a href="http://careersourceflorida.com"><img src="/img/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-          <a href="http://jobcenter.usa.gov"><img src="/img/logos/ajc_banner.png" style="vertical-align:middle" alt="American Job Center"></a>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-          <a href="http://employflorida.com"><img src="/img/logos/EF_WFP_LogoBrand_Blank_PMS.png" style="vertical-align:middle" alt="Employ Florida"></a>
-        </p>
-        <p align="center">
-          <small>© 2015 CareerSource North Central Florida / Funded by CareerSource North Central Florida as a grantee of funds from the United States Department of Labor. CareerSource North Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this website may be reached by persons using TTY/TDD equipment via the Florida Relay Service at 711. </small>
-        </p>
-        <p align="center">
-          <small> CareerSource North Central Florida takes reports of alleged fraud, waste, and abuse seriously.  To submit a report of fraud, waste, or abuse,
-            <a href="/report-fraud-waste-or-abuse">click here</a>.
-          </small>
-        <br>
-          <!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
-          <br />-->
-          <small>To report an issue with the website or make a suggestion
-            <a href="/contact-webmaster">contact the webmaster</a>.
-          </small>
-        </p>
+<footer id="footer" class="grid-block uk-float-left">
+  <div class="wrapper grid-block">
+    <section id="copyright" class="grid-block uk-float-right">
+      <div class="module   deepest">
+        <div>
+          <p align="center">
+            <a href="http://careersourceflorida.com"><img src="/img/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+            <a href="http://jobcenter.usa.gov"><img src="/img/logos/ajc_banner.png" style="vertical-align:middle" alt="American Job Center"></a>
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+            <a href="http://employflorida.com"><img src="/img/logos/EF_WFP_LogoBrand_Blank_PMS.png" style="vertical-align:middle" alt="Employ Florida"></a>
+          </p>
+          <p align="center">
+            <small>© 2015 CareerSource North Central Florida / Funded by CareerSource North Central Florida as a grantee of funds from the United States Department of Labor. CareerSource North Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this website may be reached by persons using TTY/TDD equipment via the Florida Relay Service at 711. </small>
+          </p>
+          <p align="center">
+            <small> CareerSource North Central Florida takes reports of alleged fraud, waste, and abuse seriously.  To submit a report of fraud, waste, or abuse,
+              <a href="/report-fraud-waste-or-abuse">click here</a>.
+            </small>
+          <br>
+            <!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
+            <br />-->
+            <small>To report an issue with the website or make a suggestion
+              <a href="/contact-webmaster">contact the webmaster</a>.
+            </small>
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 </footer>
-<!-- footer -->
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -180,5 +206,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- AppJS -->
     <script src="js/app.js"></script>
+    <!-- Grab minified js once gulp has built it -->
+    <script src="js/app.min.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ var server = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Program = require("./models/Program");
+var auth = require("./server/config");
 
 mongoose.connect("mongodb://localhost/programDatabase");
 
@@ -24,9 +25,11 @@ server.get("/submit", function(req, res) {
 
 server.get("/list", function(req, res) {
   res.sendFile(__dirname+"/public/pages/publicView.html");
-
 });
 
+server.get("/password", function(req, res) {
+  res.sendFile(__dirname+"/public/pages/password.html");
+});
 
 //server routes
 server.get("/api/programs", function(req, res){
@@ -56,20 +59,10 @@ server.get("/api/programs/time/:timeline", function(req, res){
 });
 
 
-// template
 
-// server.get("/api/programs/", function(req, res){
-//   Program.find({}, function(err, programs) {
-//     if(err) {
-//       console.log(err);
-//     }
-//     res.send(programs);
-//   });
-// });
 
 //refers to our mongoose schema
 server.post("/api/programs", function(req, res){
-    console.log(req.body);
     var program = new Program({
       programName:      req.body.programName,
       county:           req.body.county,
@@ -90,7 +83,6 @@ server.post("/api/programs", function(req, res){
       pastParticipants: req.body.pastParticipants,
       wordOut:          req.body.wordOut,
       funded:           req.body.funded,
-      impediments:      req.body.impediments,
       avgNumParticip:   req.body.avgNumParticip,
       description:      req.body.description,
       programUrl:       req.body.programUrl,
@@ -112,8 +104,19 @@ server.post("/api/programs", function(req, res){
       });
 });
 
+server.post("/password", function(req, res){
+    var password = req.body.password;
+    
+    if(password === auth.password){
+        res.redirect("/submit");
+    } else {
+        res.redirect("/password");
+    }
+});
+
 server.listen(port, function() {
     console.log("now listening on port " + port);
 });
 
+//exports server variable for tests
 module.exports = server;

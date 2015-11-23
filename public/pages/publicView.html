@@ -10,17 +10,21 @@
     <meta name="author" content="">
 
     <title>Programs Offered</title>
+
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
 
     <!-- Custom CSSs -->
     <link href="../css/programs.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+
+    <!-- Grabs a minified css once gulp builds it -->
+    <link rel="stylesheet" href="../css/main.min.css">
+
     <!-- Scripts for dropdowns -->
       <noscript>
         <link rel="stylesheet" type="text/css" href="css/noJS.css" />
@@ -36,40 +40,14 @@
 </h1>
  </header>
 
-
- <div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Bradford Tech Council</h4>
-        </div>
-        <div class="modal-body">
-          <h5>Description:</h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-               <h4>(352)555-5555</h4>
-                <p class="location">Location</p>
-</div>
-<div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-<!-- end container -->
-
     <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top color" role="navigation">
-    <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-     <div class="navbar-header">
-       <!-- Trying to put CSNCFL image in header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container color">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+
+           <!-- Trying to put CSNCFL image in header -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -78,17 +56,19 @@
         </button>
            <img id="CS" src="../img/csncfl-150.png" alt="Career Source Image" class="pull-left">
 
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+        </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
                    <li>
-                       <a href="">Home</a>
+                       <a href="/">Home</a>
                    </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#copyright">Contact</a>
                     </li>
 
                 </ul>
+            </div>
         </div>
     </nav>
 
@@ -97,12 +77,13 @@
         <!-- Dropdown one -->
         <div class="row" style="padding: 30px;">
             <div class="col-sm-3">
-              <div id="one" class="wrapper-dropdown-3" tabindex="1">
-              	<span>Location:</span>
+              <div id="location" class="wrapper-dropdown-3" tabindex="1">
+              	<span>County:</span>
               	<ul class="dropdown">
-              		<li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
+
               		<li><a href="#"><i class="icon-truck icon-large"></i>Alachua</a></li>
               		<li><a href="#"><i class="icon-plane icon-large"></i>Bradford</a></li>
+
               	</ul>
               </div>
             </div>
@@ -123,12 +104,16 @@
             </script>
               <!-- Dropdown two -->
               <div class="col-sm-3">
-                <div id="two" class="wrapper-dropdown-3" tabindex="1">
+                <div id="cost" class="wrapper-dropdown-3" tabindex="1">
                   <span>Cost:</span>
                   <ul class="dropdown">
-                    <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                    <li><a href="#"><i class="icon-truck icon-large"></i>less than $50</a></li>
-                    <li><a href="#"><i class="icon-plane icon-large"></i>more than $50</a></li>
+
+                    <li><a href="#"><i class="icon-envelope icon-large"></i>$0</a></li>
+                    <li><a href="#"><i class="icon-truck icon-large"></i>$500</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>$1000</a></li>
+                    <li><a href="#"><i class="icon-plane icon-large"></i>$10000</a></li>
+
+
                   </ul>
                 </div>
               </div>
@@ -149,12 +134,15 @@
               </script>
               <!-- Dropdown three -->
                 <div class="col-sm-3">
-                  <div id="three" class="wrapper-dropdown-3" tabindex="1">
+                  <div id="duration" class="wrapper-dropdown-3" tabindex="1">
                     <span>Time Length:</span>
                     <ul class="dropdown">
-                      <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                      <li><a href="#"><i class="icon-truck icon-large"></i>less than 1 hour</a></li>
-                      <li><a href="#"><i class="icon-plane icon-large"></i>more than 1 hour</a></li>
+
+                      <li><a href="#"><i class="icon-envelope icon-large"></i>&lt;10 hrs</a></li>
+                      <li><a href="#"><i class="icon-truck icon-large"></i>&lt;40 hrs</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>&lt;100 hrs</a></li>
+                      <li><a href="#"><i class="icon-plane icon-large"></i>&lt;240 hrs</a></li>
+
                     </ul>
                   </div>
                 </div>
@@ -170,17 +158,18 @@
                     $(document).click(function() {
                     // all dropdowns
                     $('.wrapper-dropdown-1').removeClass('active');
-                    });
+                  });
                   });
                 </script>
                 <!-- Dropdown four -->
                   <div class="col-sm-3">
-                    <div id="four" class="wrapper-dropdown-3" tabindex="1">
-                      <span>Age Range:</span>
+                    <div id="age" class="wrapper-dropdown-3" tabindex="1">
+                      <span>Minimum Age:</span>
                       <ul class="dropdown">
-                        <li><a href="#"><i class="icon-envelope icon-large"></i>none</a></li>
-                        <li><a href="#"><i class="icon-truck icon-large"></i>foo</a></li>
-                        <li><a href="#"><i class="icon-plane icon-large"></i>bar</a></li>
+
+                        <li><a href="#"><i class="icon-envelope icon-large"></i>&gt;16</a></li>
+                        <li><a href="#"><i class="icon-truck icon-large"></i>&gt;18</a></li>
+
                       </ul>
                     </div>
                     <br>
@@ -206,57 +195,22 @@
                 </script>
       </div>
       <!-- /container -->
-    <!-- <div class="container"> -->
 
-<!--Is there a way to make these dropdowns collapse into each other so that this displays nicer on mobile?-->
-        <!-- <header id="selection-header">
-            <div class="pull-left">
-            <h5>County:</h5>
-            <select class="select" id="county">
-                      <option value="none">none</option>
-                      <option value="Alachua">Alachua</option>
-                      <option value="Bradford">Bradford</option>
-            </select>
-            </div>
-            <div class="pull-left">
-               <h5>Cost:</h5>
-               <select class="select" id="cost">
-                      <option value="none">none</option>
-                      <option value="1-50">$1-$50</option>
-                      <option value="50+">more than $50</option>
-            </select>
-            </div>
-            <div class="pull-left">
-               <h5>Time length:</h5>
-               <select class="select" id="duration">
-                      <option value="none">none</option>
-                      <option value="less than 1 hour">less than 1 hour</option>
-                      <option value="more than 1 hour">more than 1 hour</option>
-            </select>
-            </div>
-            <div class="pull-left">
-            <h5>Age Range:</h5>
-            <select class="select" id="age">
-                      <option value="none">none</option>
-                      <option value="less than 16">less than 16</option>
-                      <option value="more than 16">more than 16</option>
-            </select>
-            </div> -->
-    <!-- <div class="search">
-            <button class="btn btn-success" id="search">Search</button>
-    </div>
-         </header> -->
+
+         </header>
 <!-- Page/View Heading -->
+
       <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header">List of Potential Employers:
+                <h3 class="page-header">List of Programs:
                     <small>Click a program for more details</small>
                 </h3>
             </div>
-        </div>
+         </div>
+      </div>
 <!-- Handlebars viewport -->
-      <div id="viewpage"></div>
+      <div id="viewpage" class="container"></div>
   <!-- /container -->
         <hr>
 
@@ -264,7 +218,7 @@
 <footer id="footer" class="grid-block uk-float-left">
   <div class="wrapper grid-block">
     <section id="copyright" class="grid-block uk-float-right">
-      <div class="module   deepest">
+      <div class="module deepest">
         <div>
           <p align="center">
             <a href="http://careersourceflorida.com"><img src="https://careersourcencfl.com/images/logos/csf.png" alt="CareerSource Florida" style="vertical-align:middle"></a>
@@ -279,8 +233,6 @@
               <a href="/report-fraud-waste-or-abuse">click here</a>.
             </small>
           <br>
-            <!--To report fraud, waste or abuse, please use <a href='#'>this form</a> to contact the Board Contract Compliance department and describe the allegations.
-            <br />-->
             <small>To report an issue with the website or make a suggestion
               <a href="/contact-webmaster">contact the webmaster</a>.
             </small>
@@ -290,19 +242,20 @@
     </section>
   </div>
 </footer>
-   <!-- jQuery -->
-   <!-- jplist core -->
-   <!-- <script src="../js/jplist-core.min.js"></script> -->
-   <!-- jplist bootstrap filter dropdown control -->
-   <!-- <script src="../js/jplist.boot-filter-dropdown.min.js"></script> -->
     <script src="../js/jquery.min.js"></script>
     <!-- HandlebarsJS -->
     <script src="../js/jquery-handlebars-1.1.4.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- lodash helps our filter -->
+    <script src="../js/lodash.min.js"></script>
+    <!-- our filter -->
+    <script src="../js/filter.js"></script>
     <!-- Handlebars template for programs list -->
     <script src="../js/template.js"></script>
     <script src = "../js/program.list.js"></script>
 
+    <!-- Grab minified js once gulp has built it -->
+    <script src="../js/app.min.js"></script>
 </body>
 </html>

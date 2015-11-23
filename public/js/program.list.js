@@ -1,21 +1,39 @@
+
+
+
 $(document).ready(function(){
+  //Cached references to the dropdown menus
+  var $county = $("#location").children("span")[0];
+  var $cost = $("#cost").children("span")[0];
+  var $duration = $("#duration").children("span")[0];
+  var $age = $("#age").children("span")[0];
+
+  $.handlebars({
+      templatePath: 'templates'
+  });
+
     var programList = [];
-    var $test = $("#test");
     //These are references to the select drop down boxes for search functionality
-    var $cost = $("#cost");
-    var $county = $("#county");
-    var $duration = $("#duration");
-    var $age = $("#age");
+
+    $("#viewpage").on("click", "button", function(){
+      $(this).siblings(".more-info").fadeToggle();
+    });
 
     $("#search").on('click', getPrograms);
 
     //This function will obtain the programs collection from the server
     function getPrograms(){
-        console.log("before");
-        console.log($cost.val());
-        console.log($county.val());
-        console.log($duration.val());
-        console.log($age.val());
+      var age = $age.innerText;
+      var county = $county.innerText;
+      var duration = $duration.innerText;
+      var cost = $cost.innerText;
+
+      if(age === "Minimum Age:"){age = false;} else { age = parseInt(age.substring(1));}
+      if(county ==="County:"){ county = false;}
+      if(duration ==="Time Length:"){duration = false;} else { duration = parseInt(duration.substring(1).split(" ")[0]);}
+      if(cost === "Cost:"){cost = false;} else { cost = parseInt(cost.substring(1));}
+
+
         var options = {
             method: "GET",
             url: "/api/programs",
@@ -24,9 +42,15 @@ $(document).ready(function(){
 
         $.ajax(options)
          .done(function(data){
-            console.log(data[0]);
-            $test.html(data[0].programName);
-            programList = data;
+            // now this will fetch <path/to/templates/content.hbs>
+            //Filter the data based on options from the list
+            var response = filterPrograms(data,county,cost,duration,age);
+            
+            $('#viewpage').render('viewpage', {
+
+                programs: response
+
+            });
         })
          .error(function(err){
             console.log(err);
