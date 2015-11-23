@@ -45,7 +45,7 @@ $(document).ready(function(){
             })
             .fail(function(){
 //This will stop the submit funtion from refreshing page, possibly for missing form pieces.
-        event.preventDefault();
+                event.preventDefault();
             });
 
     });
