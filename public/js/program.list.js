@@ -8,12 +8,37 @@ $(document).ready(function(){
   var $duration = $("#duration").children("span")[0];
   var $age = $("#age").children("span")[0];
 
+
+
   $.handlebars({
       templatePath: 'templates'
   });
 
-    var programList = [];
+
     //These are references to the select drop down boxes for search functionality
+
+    var options = {
+        method: "GET",
+        url: "/api/programs",
+        dataType: "json"
+    };
+
+    $.ajax(options)
+     .done(function(data){
+        // now this will fetch <path/to/templates/content.hbs>
+        //Filter the data based on options from the list
+
+
+        $('#viewpage').render('viewpage', {
+
+            programs: data
+
+        });
+    })
+     .error(function(err){
+        console.log(err);
+    });
+
 
     $("#viewpage").on("click", "button", function(){
       $(this).siblings(".more-info").fadeToggle();
@@ -33,9 +58,7 @@ $(document).ready(function(){
       if(duration ==="Time Length:"){duration = false;} else { duration = parseInt(duration.substring(1).split(" ")[0]);}
       if(cost === "Cost:"){cost = false;} else { cost = parseInt(cost.substring(1));}
 
-      console.log(age);
-      console.log(duration);
-      console.log(cost);
+
         var options = {
             method: "GET",
             url: "/api/programs",
@@ -46,9 +69,8 @@ $(document).ready(function(){
          .done(function(data){
             // now this will fetch <path/to/templates/content.hbs>
             //Filter the data based on options from the list
-            console.log(data);
             var response = filterPrograms(data,county,cost,duration,age);
-            console.log(response);
+
             $('#viewpage').render('viewpage', {
 
                 programs: response
