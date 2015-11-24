@@ -103,7 +103,10 @@
                                 </div>
                                 <div class="form-group">
                                   <label>County</label>
-                                  <input class="form-control" placeholder="Alachua or Bradford" id="county">
+                                  <select class="form-control" placeholder="Alachua or Bradford" id="county">
+                                  <option>Alachua</option>
+                                  <option>Bradford</option>
+                                  </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Program website Url:</label>
@@ -121,8 +124,11 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                  <label>Meals included (if any):</label>
-                                  <input class="form-control" placeholder="Yes or No" id="meals">
+                                  <label>Are meals included?</label>
+                                  <select class="form-control" id="meals">
+                                      <option value="no">No</option>
+                                      <option value="yes">Yes</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Program schedule/timeline:</label>
@@ -169,8 +175,18 @@
                                     <input class="form-control" placeholder="Type here" id="inPerson">
                                 </div>
                                 <div class="form-group">
-                                    <label>What time of day is the program? Check all that apply.</label>
-                                    <input class="form-control" placeholder="Type here" id="timeOfDay">
+                                    <label>Time of day offered?</label>
+                                    <select id="timeOfDay">
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" value="Nights"> Nights
+                                      </label>
+                                      <label class="checkbox-inline">
+                                      <input type="checkbox" value="Weekends"> Weekends
+                                      </label>
+                                      <label class="checkbox-inline">
+                                      <input type="checkbox" value="Business Hours"> Business Hours
+                                      </label>
+                                  </select>
                                 </div>
                                 <div class="form-group">
                                   <label>Affiliation with a college or university (if any): i.e. is the program related to Sante Fe College, etc.</label>
