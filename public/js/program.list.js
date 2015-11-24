@@ -8,12 +8,37 @@ $(document).ready(function(){
   var $duration = $("#duration").children("span")[0];
   var $age = $("#age").children("span")[0];
 
+
+
   $.handlebars({
       templatePath: 'templates'
   });
 
-    var programList = [];
+
     //These are references to the select drop down boxes for search functionality
+
+    var options = {
+        method: "GET",
+        url: "/api/programs",
+        dataType: "json"
+    };
+
+    $.ajax(options)
+     .done(function(data){
+        // now this will fetch <path/to/templates/content.hbs>
+        //Filter the data based on options from the list
+
+
+        $('#viewpage').render('viewpage', {
+
+            programs: data
+
+        });
+    })
+     .error(function(err){
+        console.log(err);
+    });
+
 
     $("#viewpage").on("click", "button", function(){
       $(this).siblings(".more-info").fadeToggle();

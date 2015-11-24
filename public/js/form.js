@@ -1,8 +1,10 @@
 $(document).ready(function(){
+
+
 //Using .submit to handle the form and link the submit button to an action.
     $( "#programForm" ).submit(function( event ){
-//This will stop the submit funtion from refreshing page, possibly for missing form pieces.
-        event.preventDefault();
+
+
 //building object from form.html's inputs
         var formObject = {};
         formObject.programName = $( "#programName" ).val();
@@ -40,9 +42,15 @@ $(document).ready(function(){
         $.post("/api/programs", formObject, function(){
         })
             .done(function(){
+
+                formObject = {};
+
             })
-//If this works it needs to inheret event.preventDefault()
             .fail(function(){
+
+//This will stop the submit funtion from refreshing page, possibly for missing form pieces.
+                event.preventDefault();
+
             });
 
     });
